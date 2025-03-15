@@ -1,3 +1,4 @@
+import { AccountModule } from '../modules/auth/account/account.module';
 import { getGraphQLConfig } from './config/graphql.config';
 import { PrismaModule } from './prisma/prisma.module';
 import { RedisModule } from './redis/redis.module';
@@ -11,16 +12,17 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 	imports: [
 		PrismaModule,
 		ConfigModule.forRoot({
-			isGlobal: true,
-			ignoreEnvFile: !IS_DEV_ENV
+			isGlobal: true, // make config available everywhere
+			ignoreEnvFile: !IS_DEV_ENV // ignore env file in production
 		}),
 		GraphQLModule.forRootAsync({
-			driver: ApolloDriver,
-			useFactory: getGraphQLConfig,
-			inject: [ConfigService],
-			imports: [ConfigModule]
+			driver: ApolloDriver, // use apollo driver
+			useFactory: getGraphQLConfig, // get graphql config
+			inject: [ConfigService], // inject config service
+			imports: [ConfigModule] // import config module
 		}),
-		RedisModule
+		RedisModule,
+		AccountModule
 	]
 })
 export class CoreModule {}
