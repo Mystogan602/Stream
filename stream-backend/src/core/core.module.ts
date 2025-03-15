@@ -5,6 +5,7 @@ import { Module } from '@nestjs/common'
 import { ConfigModule, ConfigService } from '@nestjs/config'
 import { GraphQLModule } from '@nestjs/graphql'
 import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util'
+import { RedisModule } from './redis/redis.module';
 
 @Module({
 	imports: [
@@ -18,7 +19,8 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util'
 			useFactory: getGraphQLConfig,
 			inject: [ConfigService],
 			imports: [ConfigModule]
-		})
+		}),
+		RedisModule
 	]
 })
 export class CoreModule {}
