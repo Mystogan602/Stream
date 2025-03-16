@@ -6,6 +6,7 @@ import { ApolloDriver } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
+import { SessionModule } from 'src/session/session.module';
 import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 
 @Module({
@@ -22,7 +23,8 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 			imports: [ConfigModule] // import config module
 		}),
 		RedisModule,
-		AccountModule
+		AccountModule,
+		SessionModule
 	]
 })
 export class CoreModule {}
