@@ -7,10 +7,13 @@ import { PrismaService } from 'src/core/prisma/prisma.service';
 export class AccountService {
 	public constructor(private readonly prisma: PrismaService) {}
 
-	public async findAll() {
-		const users = await this.prisma.user.findMany();
-
-		return users;
+	public async me(id: string) {
+		const user = await this.prisma.user.findUnique({
+			where: {
+				id
+			}
+		});
+		return user;
 	}
 
 	public async createUser(input: CreateUserInput) {
