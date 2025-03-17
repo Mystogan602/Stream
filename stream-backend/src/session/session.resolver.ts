@@ -1,23 +1,55 @@
-import { UserModel } from '../modules/auth/account/models/user.model';
+import { UserModel } from '../modules/auth/account/model/user.model';
+import { Authorization } from '../shared/decorators/auth.decorator';
 import { LoginInput } from './inputs/login.input';
+import { SessionModel } from './model/session.model';
 import { SessionService } from './session.service';
-import { Args, Context, Mutation, Resolver } from '@nestjs/graphql';
+import { Args, Context, Mutation, Query, Resolver } from '@nestjs/graphql';
+import { UserAgent } from 'src/shared/decorators/user-agent.decorator';
 import { GqlContext } from 'src/shared/types/gql-context.types';
 
 @Resolver('Session')
 export class SessionResolver {
 	public constructor(private readonly sessionService: SessionService) {}
 
+	@Authorization()
+	@Query(() => [SessionModel], { name: 'findSessionsByUser' })
+	public async findByUser(@Context() { req }: GqlContext) {
+		return this.sessionService.findByUser(req);
+	}
+
+	@Authorization()
+	@Query(() => SessionModel, { name: 'findCurrentSession' })
+	public async findCurrent(@Context() { req }: GqlContext) {
+		return this.sessionService.findCurrent(req);
+	}
+
 	@Mutation(() => UserModel, { name: 'loginUser' })
 	public async login(
 		@Context() { req }: GqlContext,
-		@Args('data') input: LoginInput
+		@Args('data') input: LoginInput,
+		@UserAgent() userAgent: string
 	) {
-		return this.sessionService.login(req, input);
+		return this.sessionService.login(req, input, userAgent);
 	}
 
+	@Authorization()
 	@Mutation(() => Boolean, { name: 'logoutUser' })
 	public async logout(@Context() { req }: GqlContext) {
 		return this.sessionService.logout(req);
+	}
+
+	@Authorization()
+	@Mutation(() => Boolean, { name: 'clearSessionCookies' })
+	public async clearSessionCookies(@Context() { req }: GqlContext) {
+		return this.sessionService.clearSession(req);
+	}
+
+	@Authorization()
+	@Mutation(() => Boolean, { name: 'removeSession' })
+	public async removeSession(
+		@Context() { req }: GqlContext,
+		@Args('id') id: string
+	) {
+		return this.sessionService.remove(req, id);
 	}
 }
