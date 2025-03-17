@@ -1,5 +1,5 @@
-import { UserModel } from '../modules/auth/account/model/user.model';
-import { Authorization } from '../shared/decorators/auth.decorator';
+import { UserModel } from 'src/modules/auth/account/model/user.model';
+import { Authorization } from 'src/shared/decorators/auth.decorator';
 import { LoginInput } from './inputs/login.input';
 import { SessionModel } from './model/session.model';
 import { SessionService } from './session.service';
