@@ -12,6 +12,7 @@ import { SessionModule } from 'src/modules/auth/session/session.module';
 import { MailModule } from 'src/modules/libs/mail/mail.module';
 import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 import { TotpModule } from 'src/modules/auth/totp/totp.module';
+import { DeactivateModule } from 'src/modules/auth/deactivate/deactivate.module';
 
 @Module({
 	imports: [
@@ -32,7 +33,8 @@ import { TotpModule } from 'src/modules/auth/totp/totp.module';
 		VerificationModule,
 		MailModule,
 		PasswordRecoveryModule,
-		TotpModule
+		TotpModule,
+		DeactivateModule
 	]
 })
 export class CoreModule {}

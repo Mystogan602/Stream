@@ -1,19 +1,13 @@
 import { Field, InputType } from '@nestjs/graphql';
-import {
-	IsNotEmpty,
-	IsString,
-	Length,
-	MinLength,
-	ValidateIf
-} from 'class-validator';
+import { IsEmail, IsNotEmpty, IsString, Length, MinLength, ValidateIf } from 'class-validator';
 
 @InputType()
-export class LoginInput {
+export class DeactivateAccountInput {
 	@Field()
 	@IsNotEmpty()
 	@IsString()
-	@MinLength(3)
-	public login: string;
+	@IsEmail()
+	public email: string;
 
 	@Field()
 	@IsNotEmpty()

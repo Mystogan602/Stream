@@ -1,36 +1,38 @@
-import type { SessionMetadata } from '@/src/shared/types/session-metadata.types';
+import type { SessionMetadata } from 'src/shared/types/session-metadata.types';
 import * as React from 'react';
 import { Html, Head, Body, Section, Text, Tailwind, Preview, Heading, Link } from '@react-email/components';
 
 const MAIL_LOGIN = process.env.MAIL_LOGIN;
 
-interface PasswordRecoveryTemplateProps {
-	domain: string;
+interface DeactivateTemplateProps {
 	token: string;
 	metadata: SessionMetadata;
 }
 
-export function PasswordRecoveryTemplate({
-	domain,
-	token,
-	metadata
-}: PasswordRecoveryTemplateProps) {
-	const resetLink = `${domain}/account/recovery/${token}`;
-
+export function DeactivateTemplate({ token, metadata }: DeactivateTemplateProps) {
 	return (
         <Html>
         <Head />
-        <Preview>Password Recovery</Preview>
+        <Preview>Deactivate Account</Preview>
         <Tailwind>
             <Body className='max-w-2xl mx-auto p-6 bg-slate-50'>
                 <Section className='text-center mb-8'>
-                    <Heading className='text-3xl text-black font-bold'>Password Recovery</Heading>
+                    <Heading className='text-3xl text-black font-bold'>Deactivate Account</Heading>
                     <Text className='text-base text-black'>
-                        To reset your password, please click the link below.
+                        You initiated the process of deactivating your account on the <b>Stream</b> platform.
                     </Text>
-                    <Link href={resetLink} className='inline-flex justify-center items-center rounded-full text-sm font-medium text-white bg-[#18B9AE] px-5 py-2'>
-                        Reset password
-                    </Link>
+                </Section>
+
+                <Section className='bg-gray-100 rounded-lg p-6 text-center'>
+                    <Heading className='text-2xl text-black font-semibold'>
+                        Confirmation code:
+                    </Heading>
+                    <Heading className='text-3xl text-black font-semibold'>
+                        {token}
+                    </Heading>
+                    <Text className='text-black'>
+                        This code is valid for 5 minutes.
+                    </Text>
                 </Section>
 
                 <Section className='bg-gray-100 rounded-lg p-6 mb-6'>
