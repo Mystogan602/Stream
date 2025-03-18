@@ -1,5 +1,7 @@
+import { VerificationService } from '../verification/verification.service';
 import { LoginInput } from './inputs/login.input';
 import {
+	BadRequestException,
 	ConflictException,
 	Injectable,
 	InternalServerErrorException,
@@ -12,13 +14,15 @@ import type { Request } from 'express';
 import { PrismaService } from 'src/core/prisma/prisma.service';
 import { RedisService } from 'src/core/redis/redis.service';
 import { getSessionMetadata } from 'src/shared/utils/session-metadata.util';
+import { destroySession, saveSession } from 'src/shared/utils/session.util';
 
 @Injectable()
 export class SessionService {
 	public constructor(
 		private readonly prisma: PrismaService,
 		private readonly redis: RedisService,
-		private readonly config: ConfigService
+		private readonly config: ConfigService,
+		private readonly verificationService: VerificationService
 	) {}
 
 	public async findByUser(request: Request) {
@@ -89,39 +93,21 @@ export class SessionService {
 		if (!isPasswordValid)
 			throw new UnauthorizedException('Password is incorrect');
 
+		if (!user.isEmailVerified) {
+			await this.verificationService.sendVerificationToken(user);
+
+			throw new BadRequestException(
+				'Account is not verified. Please check your email for verification'
+			);
+		}
+
 		const metadata = getSessionMetadata(request, userAgent);
 
-		return new Promise((resolve, reject) => {
-			request.session.userId = user.id;
-			request.session.createdAt = new Date();
-			request.session.metadata = metadata;
-
-			request.session.save(error => {
-				if (error)
-					return reject(
-						new InternalServerErrorException('Failed to login')
-					);
-
-				resolve(user);
-			});
-		});
+		return saveSession(request, user, metadata);
 	}
 
 	public async logout(request: Request) {
-		return new Promise((resolve, reject) => {
-			request.session.destroy(error => {
-				if (error)
-					return reject(
-						new InternalServerErrorException('Failed to logout')
-					);
-
-				request.res?.clearCookie(
-					this.config.getOrThrow<string>('SESSION_NAME')
-				);
-
-				resolve(true);
-			});
-		});
+		return destroySession(request, this.config);
 	}
 
 	public async clearSession(request: Request) {
