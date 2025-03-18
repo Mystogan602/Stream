@@ -16,7 +16,7 @@ export function VerificationTemplate({ domain, token }: VerificationTemplateProp
             <Head />
             <Preview>Account Verification</Preview>
             <Tailwind>
-                <Body className='max-w-2xl mx-auto p-6bg-slate-50'>
+                <Body className='max-w-2xl mx-auto p-6 bg-slate-50'>
                     <Section className='text-center mb-8'>
                         <Heading className='text-3xl text-black font-bold'>Verify your email</Heading>
                         <Text className='text-base text-black'>

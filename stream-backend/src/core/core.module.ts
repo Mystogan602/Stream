@@ -1,4 +1,5 @@
 import { AccountModule } from '../modules/auth/account/account.module';
+import { PasswordRecoveryModule } from '../modules/auth/password-recovery/password-recovery.module';
 import { VerificationModule } from '../modules/auth/verification/verification.module';
 import { getGraphQLConfig } from './config/graphql.config';
 import { PrismaModule } from './prisma/prisma.module';
@@ -28,7 +29,8 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 		AccountModule,
 		SessionModule,
 		VerificationModule,
-		MailModule
+		MailModule,
+		PasswordRecoveryModule
 	]
 })
 export class CoreModule {}
