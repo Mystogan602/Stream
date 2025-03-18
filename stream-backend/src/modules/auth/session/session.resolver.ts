@@ -1,9 +1,9 @@
-import { UserModel } from 'src/modules/auth/account/model/user.model';
-import { Authorization } from 'src/shared/decorators/auth.decorator';
+import { UserModel } from '../account/model/user.model';
 import { LoginInput } from './inputs/login.input';
 import { SessionModel } from './model/session.model';
 import { SessionService } from './session.service';
 import { Args, Context, Mutation, Query, Resolver } from '@nestjs/graphql';
+import { Authorization } from 'src/shared/decorators/auth.decorator';
 import { UserAgent } from 'src/shared/decorators/user-agent.decorator';
 import { GqlContext } from 'src/shared/types/gql-context.types';
 

@@ -11,6 +11,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { SessionModule } from 'src/modules/auth/session/session.module';
 import { MailModule } from 'src/modules/libs/mail/mail.module';
 import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
+import { TotpModule } from 'src/modules/auth/totp/totp.module';
 
 @Module({
 	imports: [
@@ -30,7 +31,8 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 		SessionModule,
 		VerificationModule,
 		MailModule,
-		PasswordRecoveryModule
+		PasswordRecoveryModule,
+		TotpModule
 	]
 })
 export class CoreModule {}

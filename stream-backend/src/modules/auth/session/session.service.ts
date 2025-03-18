@@ -11,6 +11,7 @@ import {
 import { ConfigService } from '@nestjs/config';
 import { verify } from 'argon2';
 import type { Request } from 'express';
+import { TOTP } from 'otpauth';
 import { PrismaService } from 'src/core/prisma/prisma.service';
 import { RedisService } from 'src/core/redis/redis.service';
 import { getSessionMetadata } from 'src/shared/utils/session-metadata.util';
@@ -75,7 +76,7 @@ export class SessionService {
 	}
 
 	public async login(request: Request, input: LoginInput, userAgent: string) {
-		const { login, password } = input;
+		const { login, password, pin } = input;
 
 		const user = await this.prisma.user.findFirst({
 			where: {
@@ -99,6 +100,23 @@ export class SessionService {
 			throw new BadRequestException(
 				'Account is not verified. Please check your email for verification'
 			);
+		}
+
+		if (user.isTotpEnabled) {
+
+			const totp = new TOTP({
+				issuer: 'Stream',
+				label: `${user.email}`,
+				algorithm: 'SHA1',
+				digits: 6,
+				secret: user.totpSecret ?? ''
+			});
+
+			const delta = totp.validate({ token: pin ?? '' });
+
+			if (delta === null) {
+				throw new BadRequestException('Invalid code');
+			}
 		}
 
 		const metadata = getSessionMetadata(request, userAgent);
