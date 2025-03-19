@@ -13,7 +13,7 @@ import { MailModule } from 'src/modules/libs/mail/mail.module';
 import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 import { TotpModule } from 'src/modules/auth/totp/totp.module';
 import { DeactivateModule } from 'src/modules/auth/deactivate/deactivate.module';
-
+import { CronModule } from 'src/modules/cron/cron.module';
 @Module({
 	imports: [
 		PrismaModule,
@@ -34,7 +34,8 @@ import { DeactivateModule } from 'src/modules/auth/deactivate/deactivate.module'
 		MailModule,
 		PasswordRecoveryModule,
 		TotpModule,
-		DeactivateModule
+		DeactivateModule,
+		CronModule
 	]
 })
-export class CoreModule {}
+export class CoreModule { }
