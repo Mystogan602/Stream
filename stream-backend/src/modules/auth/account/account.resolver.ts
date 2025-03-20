@@ -2,7 +2,7 @@ import { AccountService } from './account.service';
 import { ChangeEmailInput } from './inputs/change-email.input';
 import { ChangePasswordInput } from './inputs/change-password.input';
 import { CreateUserInput } from './inputs/create-user.input';
-import { UserModel } from './model/user.model';
+import { UserModel } from './models/user.model';
 import type { User } from '@/prisma/generated/default';
 import { Authorization } from '@/src/shared/decorators/auth.decorator';
 import { Authorized } from '@/src/shared/decorators/authorized.decorator';

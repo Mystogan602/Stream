@@ -1,5 +1,6 @@
 import { AccountModule } from '../modules/auth/account/account.module';
 import { PasswordRecoveryModule } from '../modules/auth/password-recovery/password-recovery.module';
+import { ProfileModule } from '../modules/auth/profile/profile.module';
 import { VerificationModule } from '../modules/auth/verification/verification.module';
 import { getGraphQLConfig } from './config/graphql.config';
 import { PrismaModule } from './prisma/prisma.module';
@@ -38,7 +39,8 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 		TotpModule,
 		DeactivateModule,
 		CronModule,
-		StorageModule
+		StorageModule,
+		ProfileModule
 	]
 })
 export class CoreModule {}

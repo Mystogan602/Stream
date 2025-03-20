@@ -8,6 +8,7 @@ import { NestFactory } from '@nestjs/core';
 import { RedisStore } from 'connect-redis';
 import * as cookieParser from 'cookie-parser';
 import * as session from 'express-session';
+import * as graphqlUploadExpress from 'graphql-upload/graphqlUploadExpress.js';
 
 async function bootstrap() {
 	// create app
@@ -19,6 +20,9 @@ async function bootstrap() {
 
 	// cookie
 	app.use(cookieParser(config.getOrThrow<string>('COOKIE_SECRET')));
+
+	// graphql upload
+	app.use(config.getOrThrow<string>('GRAPHQL_PREFIX'), graphqlUploadExpress());
 
 	// validation
 	app.useGlobalPipes(new ValidationPipe({ transform: true }));

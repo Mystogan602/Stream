@@ -1,4 +1,4 @@
-import { UserModel } from '../account/model/user.model';
+import { UserModel } from '../account/models/user.model';
 import { LoginInput } from './inputs/login.input';
 import { SessionModel } from './model/session.model';
 import { SessionService } from './session.service';

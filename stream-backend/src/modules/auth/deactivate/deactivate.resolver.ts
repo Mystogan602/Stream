@@ -1,4 +1,4 @@
-import { UserModel } from '../account/model/user.model';
+import { UserModel } from '../account/models/user.model';
 import { DeactivateService } from './deactivate.service';
 import { DeactivateAccountInput } from './inputs/deactivate-account.input';
 import type { User } from '@/prisma/generated/default';
