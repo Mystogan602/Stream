@@ -7,7 +7,7 @@ import { Authorization } from '@/src/shared/decorators/auth.decorator';
 import { Authorized } from '@/src/shared/decorators/authorized.decorator';
 import { FileValidationPipe } from '@/src/shared/pipes/file-validation.pipe';
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { GraphQLUpload } from 'graphql-upload/GraphQLUpload.js';
+import * as GraphQLUpload from 'graphql-upload/GraphQLUpload.js';
 import * as Upload from 'graphql-upload/Upload.js';
 
 @Resolver('Stream')
@@ -33,15 +33,15 @@ export class StreamResolver {
 		return this.streamService.changeInfo(user, input);
 	}
 
-	// @Authorization()
-	// @Mutation(() => StreamModel, { name: 'changeStreamThumbnail' })
-	// public async changeThumbnail(
-	// 	@Authorized() user: User,
-	// 	@Args('thumbnail', { type: () => GraphQLUpload }, FileValidationPipe)
-	// 	thumbnail: Upload
-	// ) {
-	// 	return this.streamService.changeThumbnail(user, thumbnail);
-	// }
+	@Authorization()
+	@Mutation(() => StreamModel, { name: 'changeStreamThumbnail' })
+	public async changeThumbnail(
+		@Authorized() user: User,
+		@Args('thumbnail', { type: () => GraphQLUpload }, FileValidationPipe)
+		thumbnail: Upload
+	) {
+		return this.streamService.changeThumbnail(user, thumbnail);
+	}
 
 	@Authorization()
 	@Mutation(() => StreamModel, { name: 'removeStreamThumbnail' })

@@ -2,7 +2,9 @@ import { AccountModule } from '../modules/auth/account/account.module';
 import { PasswordRecoveryModule } from '../modules/auth/password-recovery/password-recovery.module';
 import { ProfileModule } from '../modules/auth/profile/profile.module';
 import { VerificationModule } from '../modules/auth/verification/verification.module';
+import { LivekitModule } from '../modules/libs/livekit/livekit.module';
 import { getGraphQLConfig } from './config/graphql.config';
+import { getLiveKitConfig } from './config/livekit.config';
 import { PrismaModule } from './prisma/prisma.module';
 import { RedisModule } from './redis/redis.module';
 import { ApolloDriver } from '@nestjs/apollo';
@@ -42,7 +44,12 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 		CronModule,
 		StorageModule,
 		ProfileModule,
-		StreamModule
+		StreamModule,
+		LivekitModule.registerAsync({
+			imports: [ConfigModule],
+			useFactory: getLiveKitConfig,
+			inject: [ConfigService]
+		})
 	]
 })
 export class CoreModule {}
