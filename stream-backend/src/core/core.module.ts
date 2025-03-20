@@ -15,6 +15,7 @@ import { TotpModule } from 'src/modules/auth/totp/totp.module';
 import { CronModule } from 'src/modules/cron/cron.module';
 import { MailModule } from 'src/modules/libs/mail/mail.module';
 import { StorageModule } from 'src/modules/libs/storage/storage.module';
+import { StreamModule } from 'src/modules/stream/stream.module';
 import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 
 @Module({
@@ -40,7 +41,8 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 		DeactivateModule,
 		CronModule,
 		StorageModule,
-		ProfileModule
+		ProfileModule,
+		StreamModule
 	]
 })
 export class CoreModule {}

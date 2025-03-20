@@ -52,7 +52,12 @@ export class AccountService {
 				username,
 				email,
 				password: hashedPassword,
-				displayName: username
+				displayName: username,
+				stream: {
+					create: {
+						title: `${username}'s Stream`
+					}
+				}
 			}
 		});
 
