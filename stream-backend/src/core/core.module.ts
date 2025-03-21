@@ -22,7 +22,7 @@ import { IngressModule } from 'src/modules/stream/ingress/ingress.module';
 import { StreamModule } from 'src/modules/stream/stream.module';
 import { WebhookModule } from 'src/modules/webhook/webhook.module';
 import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
-
+import { ChatModule } from 'src/modules/chat/chat.module';
 @Module({
 	imports: [
 		PrismaModule,
@@ -55,7 +55,8 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 		}),
 		IngressModule,
 		WebhookModule,
-		CategoryModule
+		CategoryModule,
+		ChatModule
 	]
 })
 export class CoreModule {}
