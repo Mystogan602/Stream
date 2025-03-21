@@ -19,6 +19,7 @@ import { MailModule } from 'src/modules/libs/mail/mail.module';
 import { StorageModule } from 'src/modules/libs/storage/storage.module';
 import { IngressModule } from 'src/modules/stream/ingress/ingress.module';
 import { StreamModule } from 'src/modules/stream/stream.module';
+import { WebhookModule } from 'src/modules/webhook/webhook.module';
 import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 
 @Module({
@@ -51,7 +52,8 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 			useFactory: getLiveKitConfig,
 			inject: [ConfigService]
 		}),
-		IngressModule
+		IngressModule,
+		WebhookModule
 	]
 })
 export class CoreModule {}

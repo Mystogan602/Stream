@@ -12,7 +12,7 @@ import * as graphqlUploadExpress from 'graphql-upload/graphqlUploadExpress.js';
 
 async function bootstrap() {
 	// create app
-	const app = await NestFactory.create(CoreModule);
+	const app = await NestFactory.create(CoreModule, { rawBody: true });
 
 	// config
 	const config = app.get(ConfigService);
@@ -22,7 +22,10 @@ async function bootstrap() {
 	app.use(cookieParser(config.getOrThrow<string>('COOKIE_SECRET')));
 
 	// graphql upload
-	app.use(config.getOrThrow<string>('GRAPHQL_PREFIX'), graphqlUploadExpress());
+	app.use(
+		config.getOrThrow<string>('GRAPHQL_PREFIX'),
+		graphqlUploadExpress()
+	);
 
 	// validation
 	app.useGlobalPipes(new ValidationPipe({ transform: true }));
