@@ -9,6 +9,8 @@ import { FileValidationPipe } from '@/src/shared/pipes/file-validation.pipe';
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 import * as GraphQLUpload from 'graphql-upload/GraphQLUpload.js';
 import * as Upload from 'graphql-upload/Upload.js';
+import { GenerateStreamTokenInput } from './inputs/generate-stream-token.input';
+import { GenerateStreamTokenModel } from './models/generate-stream-token.model';
 
 @Resolver('Stream')
 export class StreamResolver {
@@ -47,5 +49,10 @@ export class StreamResolver {
 	@Mutation(() => StreamModel, { name: 'removeStreamThumbnail' })
 	public async removeThumbnail(@Authorized() user: User) {
 		return this.streamService.removeThumbnail(user);
+	}
+
+	@Mutation(() => GenerateStreamTokenModel, { name: 'generateStreamToken' })
+	public async generateStreamToken(@Args('data') input: GenerateStreamTokenInput) {
+		return this.streamService.generateStreamToken(input);
 	}
 }
