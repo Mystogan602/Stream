@@ -33,7 +33,8 @@ export class StreamService {
 				}
 			},
 			include: {
-				user: true
+				user: true,
+				category: true
 			},
 			take: take || 10,
 			skip: skip || 0,
@@ -61,7 +62,8 @@ export class StreamService {
 				}
 			},
 			include: {
-				user: true
+				user: true,
+				category: true
 			},
 			skip: 0,
 			take: total
@@ -94,7 +96,12 @@ export class StreamService {
 				id: stream.id
 			},
 			data: {
-				title
+				title,
+				category: {
+					connect: {
+						id: categoryId
+					}
+				}
 			}
 		});
 
