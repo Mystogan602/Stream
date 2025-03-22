@@ -7,6 +7,7 @@ import { LivekitModule } from '../modules/libs/livekit/livekit.module';
 import { NotificationModule } from '../modules/notification/notification.module';
 import { getGraphQLConfig } from './config/graphql.config';
 import { getLiveKitConfig } from './config/livekit.config';
+import { getStripeConfig } from './config/stripe.config';
 import { PrismaModule } from './prisma/prisma.module';
 import { RedisModule } from './redis/redis.module';
 import { ApolloDriver } from '@nestjs/apollo';
@@ -22,6 +23,7 @@ import { CronModule } from 'src/modules/cron/cron.module';
 import { FollowModule } from 'src/modules/follow/follow.module';
 import { MailModule } from 'src/modules/libs/mail/mail.module';
 import { StorageModule } from 'src/modules/libs/storage/storage.module';
+import { StripeModule } from 'src/modules/libs/stripe/stripe.module';
 import { TelegramModule } from 'src/modules/libs/telegram/telegram.module';
 import { IngressModule } from 'src/modules/stream/ingress/ingress.module';
 import { StreamModule } from 'src/modules/stream/stream.module';
@@ -65,7 +67,12 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 		FollowModule,
 		ChannelModule,
 		NotificationModule,
-		TelegramModule
+		TelegramModule,
+		StripeModule.registerAsync({
+			imports: [ConfigModule],
+			useFactory: getStripeConfig,
+			inject: [ConfigService]
+		})
 	]
 })
 export class CoreModule {}
