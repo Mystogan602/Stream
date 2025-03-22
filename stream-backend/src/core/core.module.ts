@@ -15,14 +15,16 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { DeactivateModule } from 'src/modules/auth/deactivate/deactivate.module';
 import { SessionModule } from 'src/modules/auth/session/session.module';
 import { TotpModule } from 'src/modules/auth/totp/totp.module';
+import { ChatModule } from 'src/modules/chat/chat.module';
 import { CronModule } from 'src/modules/cron/cron.module';
+import { FollowModule } from 'src/modules/follow/follow.module';
 import { MailModule } from 'src/modules/libs/mail/mail.module';
 import { StorageModule } from 'src/modules/libs/storage/storage.module';
 import { IngressModule } from 'src/modules/stream/ingress/ingress.module';
 import { StreamModule } from 'src/modules/stream/stream.module';
 import { WebhookModule } from 'src/modules/webhook/webhook.module';
 import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
-import { ChatModule } from 'src/modules/chat/chat.module';
+
 @Module({
 	imports: [
 		PrismaModule,
@@ -56,7 +58,8 @@ import { ChatModule } from 'src/modules/chat/chat.module';
 		IngressModule,
 		WebhookModule,
 		CategoryModule,
-		ChatModule
+		ChatModule,
+		FollowModule
 	]
 })
 export class CoreModule {}
