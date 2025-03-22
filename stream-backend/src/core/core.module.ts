@@ -22,6 +22,7 @@ import { CronModule } from 'src/modules/cron/cron.module';
 import { FollowModule } from 'src/modules/follow/follow.module';
 import { MailModule } from 'src/modules/libs/mail/mail.module';
 import { StorageModule } from 'src/modules/libs/storage/storage.module';
+import { TelegramModule } from 'src/modules/libs/telegram/telegram.module';
 import { IngressModule } from 'src/modules/stream/ingress/ingress.module';
 import { StreamModule } from 'src/modules/stream/stream.module';
 import { WebhookModule } from 'src/modules/webhook/webhook.module';
@@ -63,7 +64,8 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 		ChatModule,
 		FollowModule,
 		ChannelModule,
-		NotificationModule
+		NotificationModule,
+		TelegramModule
 	]
 })
 export class CoreModule {}

@@ -1,4 +1,4 @@
-import { UserModel } from '../account/models/user.model';
+import { AuthModel } from '../account/models/auth.model';
 import { DeactivateService } from './deactivate.service';
 import { DeactivateAccountInput } from './inputs/deactivate-account.input';
 import type { User } from '@/prisma/generated/default';
@@ -13,7 +13,7 @@ export class DeactivateResolver {
 	public constructor(private readonly deactivateService: DeactivateService) {}
 
 	@Authorization()
-	@Mutation(() => UserModel, { name: 'deactivateAccount' })
+	@Mutation(() => AuthModel, { name: 'deactivateAccount' })
 	public async deactivate(
 		@Context() { req }: GqlContext,
 		@Args('data') input: DeactivateAccountInput,

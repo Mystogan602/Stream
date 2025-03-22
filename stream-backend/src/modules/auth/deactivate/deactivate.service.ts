@@ -13,13 +13,15 @@ import { verify } from 'argon2';
 import type { Request } from 'express';
 import { PrismaService } from 'src/core/prisma/prisma.service';
 import { MailService } from 'src/modules/libs/mail/mail.service';
+import { TelegramService } from 'src/modules/libs/telegram/telegram.service';
 
 @Injectable()
 export class DeactivateService {
 	public constructor(
 		private readonly prismaService: PrismaService,
 		private readonly configService: ConfigService,
-		private readonly mailService: MailService
+		private readonly mailService: MailService,
+		private readonly telegramService: TelegramService
 	) {}
 
 	public async deactivate(
@@ -105,6 +107,21 @@ export class DeactivateService {
 			deactivateToken.token,
 			metadata
 		);
+
+		if (
+			deactivateToken.user?.notificationSettings?.telegramNotifications &&
+			deactivateToken.user?.telegramId
+		) {
+			await this.telegramService.sendDeactivationToken(
+				deactivateToken.user.telegramId,
+				deactivateToken.token,
+				metadata
+			);
+
+			// await this.telegramService.sendAccountDeleted(
+			// 	deactivateToken.user.telegramId
+			// );
+		}
 
 		return true;
 	}
