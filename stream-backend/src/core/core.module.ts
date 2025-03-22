@@ -4,6 +4,7 @@ import { ProfileModule } from '../modules/auth/profile/profile.module';
 import { VerificationModule } from '../modules/auth/verification/verification.module';
 import { CategoryModule } from '../modules/category/category.module';
 import { LivekitModule } from '../modules/libs/livekit/livekit.module';
+import { NotificationModule } from '../modules/notification/notification.module';
 import { getGraphQLConfig } from './config/graphql.config';
 import { getLiveKitConfig } from './config/livekit.config';
 import { PrismaModule } from './prisma/prisma.module';
@@ -61,7 +62,8 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 		CategoryModule,
 		ChatModule,
 		FollowModule,
-		ChannelModule
+		ChannelModule,
+		NotificationModule
 	]
 })
 export class CoreModule {}
