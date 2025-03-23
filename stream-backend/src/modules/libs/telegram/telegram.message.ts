@@ -83,4 +83,13 @@ export const MESSAGES = {
 		`👤 Sponsor: <a href="https://mysstream.com/${sponsor.username}">${sponsor.displayName}</a>\n` +
 		`📅 Date of purchase: <b>${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}</b>\n\n` +
 		`🙏 Thank you for your work and support on the platform Mysstream!`,
+	enableTwoFactor: () =>
+		`🔐 <b>Protect your account!</b>\n\n` +
+		`Please enable two-factor authentication in <a href="https://mysstream.com/dashboard/settings">account settings</a>.`,
+
+	verifyChannel: () =>
+		`✅ <b>Congratulations! Your channel has been verified</b>\n\n` +
+		`We are happy to announce that your channel is now verified and you have received the official verification badge.\n\n` +
+		`The verification badge confirms the authenticity of your channel and increases viewer trust.\n\n` +
+		`Thank you for being with us and continue developing your channel on Mysstream!`
 };
