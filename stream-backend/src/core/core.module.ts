@@ -5,6 +5,9 @@ import { VerificationModule } from '../modules/auth/verification/verification.mo
 import { CategoryModule } from '../modules/category/category.module';
 import { LivekitModule } from '../modules/libs/livekit/livekit.module';
 import { NotificationModule } from '../modules/notification/notification.module';
+import { PlanModule } from '../modules/sponsorship/plan/plan.module';
+import { SubscriptionModule } from '../modules/sponsorship/subscription/subscription.module';
+import { TransactionModule } from '../modules/sponsorship/transaction/transaction.module';
 import { getGraphQLConfig } from './config/graphql.config';
 import { getLiveKitConfig } from './config/livekit.config';
 import { getStripeConfig } from './config/stripe.config';
@@ -72,7 +75,10 @@ import { IS_DEV_ENV } from 'src/shared/utils/is-dev.util';
 			imports: [ConfigModule],
 			useFactory: getStripeConfig,
 			inject: [ConfigService]
-		})
+		}),
+		SubscriptionModule,
+		PlanModule,
+		TransactionModule
 	]
 })
 export class CoreModule {}

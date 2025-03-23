@@ -1,5 +1,5 @@
-import type { User } from '@/prisma/generated/default';
-import { SessionMetadata } from '@/src/shared/types/session-metadata.types';
+import type { SponsorshipPlan, User } from '@/prisma/generated/default';
+import type { SessionMetadata } from '@/src/shared/types/session-metadata.types';
 
 export const MESSAGES = {
 	welcome:
@@ -75,5 +75,12 @@ export const MESSAGES = {
 	newFollowing: (follower: User, followersCount: number) =>
 		`🎉 <b>You have a new follower!</b>\n\n` +
 		`👤 This is user <a href="https://mysstream.com/${follower.username}">${follower.displayName}</a>\n\n` +
-		`👥 Total number of followers on your channel: ${followersCount}`
+		`👥 Total number of followers on your channel: ${followersCount}`,
+	newSponsorship: (plan: SponsorshipPlan, sponsor: User) =>
+		`🎉 <b>New sponsorship!</b>\n\n` +
+		`💝 You have received a new sponsorship on the plan <b>${plan.title}</b>.\n` +
+		`💰 Amount: <b>${plan.price} VND</b>\n` +
+		`👤 Sponsor: <a href="https://mysstream.com/${sponsor.username}">${sponsor.displayName}</a>\n` +
+		`📅 Date of purchase: <b>${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}</b>\n\n` +
+		`🙏 Thank you for your work and support on the platform Mysstream!`,
 };

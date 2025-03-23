@@ -7,7 +7,7 @@ export function getStripeConfig(
 	return {
 		apiKey: configService.getOrThrow<string>('STRIPE_SECRET_KEY'),
 		config: {
-			apiVersion: '2025-02-24.acacia'
+			apiVersion: '2024-10-28.acacia'
 		}
 	};
 }
