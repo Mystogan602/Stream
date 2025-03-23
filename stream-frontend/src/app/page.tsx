@@ -1,13 +1,11 @@
 'use client';
 
-import { useFindChannelByUsernameQuery } from '@/graphql/generated/output';
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
-  const { data, loading } = useFindChannelByUsernameQuery({
-    variables: {
-      username: 'jack'
-    }
-  });
+  const t = useTranslations('home');
 
-  return <div>{loading ? <div>Loading...</div> : JSON.stringify(data)}</div>;
+  return <div className='flex flex-col items-center justify-center h-screen'>
+    <h1 className='text-4xl font-bold'>{t('title')}</h1>
+  </div>;
 }
