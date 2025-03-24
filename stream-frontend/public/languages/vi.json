@@ -25,6 +25,23 @@
             "heading": "Xác minh tài khoản",
             "successMessage": "Tài khoản đã được xác minh",
             "errorMessage": "Lỗi khi xác minh tài khoản"
+        },
+        "login": {
+            "heading": "Đăng nhập vào MysStream",
+            "backButtonLabel": "Bạn chưa có tài khoản? Đăng ký!",
+            "loginLabel": "Đăng nhập",
+            "loginDescription": "Tên hoặc email mà bạn đã nhập khi đăng ký.",
+            "loginPlaceholder": "Nhập tên hoặc email",
+            "passwordLabel": "Mật khẩu",
+            "passwordDescription": "Mật khẩu mà bạn đã nhập khi đăng ký.",
+            "passwordPlaceholder": "Nhập mật khẩu",
+            "pinLabel": "Mã 6 chữ số",
+            "pinDescription": "Nhập mã từ ứng dụng xác thực của bạn.",
+            "forgotPassword": "Quên mật khẩu?",
+            "submitButton": "Đăng nhập",
+            "successMessage": "Bạn đã đăng nhập thành công",
+            "errorMessage": "Lỗi khi đăng nhập",
+            "loading": "Đang đăng nhập..."
         }
     }
 }

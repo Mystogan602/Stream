@@ -25,6 +25,23 @@
             "heading": "Verify your account",
             "successMessage": "Account verified",
             "errorMessage": "Error verifying account"
+        },
+        "login": {
+            "heading": "Log in to MysStream",
+            "backButtonLabel": "Don't have an account? Register!",
+            "loginLabel": "Login",
+            "loginDescription": "Your name or email that you entered during registration.",
+            "loginPlaceholder": "Enter your name or email",
+            "passwordLabel": "Password",
+            "passwordDescription": "The password you entered during registration.",
+            "passwordPlaceholder": "Enter your password",
+            "pinLabel": "6-digit code",
+            "pinDescription": "Enter the code from your authentication app.",
+            "forgotPassword": "Forgot password?",
+            "submitButton": "Log in",
+            "successMessage": "You have successfully logged in",
+            "errorMessage": "Error logging in",
+            "loading": "Logging in..."
         }
     }
 }

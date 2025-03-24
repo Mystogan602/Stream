@@ -1,0 +1,6 @@
+mutation LoginUser($data: LoginInput!) {
+	loginUser(data: $data) {
+		username
+		isTotpEnabled
+	}
+}
