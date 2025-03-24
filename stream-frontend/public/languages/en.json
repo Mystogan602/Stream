@@ -1,5 +1,25 @@
 {
-    "home": {
-        "title": "Home Page"
+    "auth": {
+        "register": {
+            "heading": "Register for MysStream",
+            "backButtonLabel": "Already have an account? Login",
+            "usernameLabel": "Username",
+            "usernameDescription": "This is the name that other users will know you by",
+            "usernamePlaceholder": "Enter your username",
+            "emailLabel": "Email",
+            "emailDescription": "We can use your email to send notifications related to your account",
+            "emailPlaceholder": "Enter your email",
+            "passwordLabel": "Password",
+            "passwordPlaceholder": "Enter your password",
+            "passwordDescription": "Password must be at least 8 characters long",
+            "submitButton": "Register",
+            "successAlertTitle": "Check your email",
+            "successAlertDescription": "A verification email has been sent to your email address. If you do not see the email, please check your spam folder",
+            "errorMessage": "Error creating account",
+            "verify": {
+                "successMessage": "Account verified"
+            },
+            "loading": "Creating account..."
+        }
     }
 }

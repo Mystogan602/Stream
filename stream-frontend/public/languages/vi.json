@@ -1,5 +1,28 @@
 {
     "home": {
         "title": "Trang chủ"
+    },
+    "auth": {
+        "register": {
+            "heading": "Đăng ký MysStream",
+            "backButtonLabel": "Đã có tài khoản? Đăng nhập",
+            "usernameLabel": "Tên người dùng",
+            "usernamePlaceholder": "Nhập tên người dùng",
+            "usernameDescription": "Đây là tên mà người dùng khác sẽ biết đến bạn",
+            "emailLabel": "Email",
+            "emailPlaceholder": "Nhập email",
+            "emailDescription": "Chúng tôi có thể sử dụng email của bạn để gửi thông báo liên quan đến tài khoản",
+            "passwordLabel": "Mật khẩu",
+            "passwordPlaceholder": "Nhập mật khẩu",
+            "passwordDescription": "Mật khẩu phải có ít nhất 8 ký tự",
+            "submitButton": "Đăng ký",
+            "successAlertTitle": "Kiểm tra email của bạn",
+            "successAlertDescription": "Một email xác nhận đã được gửi đến địa chỉ email của bạn. Nếu bạn không thấy email, hãy kiểm tra thư mục Spam",
+            "errorMessage": "Lỗi khi tạo tài khoản",
+            "verify": {
+                "successMessage": "Tài khoản đã được xác minh"
+            },
+            "loading": "Đang tạo tài khoản..."
+        }
     }
 }
