@@ -1,7 +1,4 @@
 {
-    "home": {
-        "title": "Trang chủ"
-    },
     "auth": {
         "register": {
             "heading": "Đăng ký MysStream",
@@ -23,6 +20,11 @@
                 "successMessage": "Tài khoản đã được xác minh"
             },
             "loading": "Đang tạo tài khoản..."
+        },
+        "verify": {
+            "heading": "Xác minh tài khoản",
+            "successMessage": "Tài khoản đã được xác minh",
+            "errorMessage": "Lỗi khi xác minh tài khoản"
         }
     }
 }

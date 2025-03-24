@@ -12,13 +12,13 @@ import {
 } from '@/components/ui/common/Card';
 
 interface AuthWrapperProps {
-	header: string;
+	heading: string;
 	backButtonLabel?: string;
 	backButtonHref?: string;
 }
 export function AuthWrapper({
 	children,
-	header,
+	heading,
 	backButtonLabel,
 	backButtonHref
 }: PropsWithChildren<AuthWrapperProps>) {
@@ -32,7 +32,7 @@ export function AuthWrapper({
 						width={40}
 						height={40}
 					/>
-					<CardTitle>{header}</CardTitle>
+					<CardTitle>{heading}</CardTitle>
 				</CardHeader>
 				<CardContent>{children}</CardContent>
 				<CardFooter className='-mt-2'>

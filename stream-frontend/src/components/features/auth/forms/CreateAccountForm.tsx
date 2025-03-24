@@ -68,7 +68,7 @@ export function CreateAccountForm() {
 
 	return (
 		<AuthWrapper
-			header={t('heading')}
+			heading={t('heading')}
 			backButtonLabel={t('backButtonLabel')}
 			backButtonHref='/account/login'
 		>

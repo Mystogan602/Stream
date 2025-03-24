@@ -20,6 +20,11 @@
                 "successMessage": "Account verified"
             },
             "loading": "Creating account..."
+        },
+        "verify": {
+            "heading": "Verify your account",
+            "successMessage": "Account verified",
+            "errorMessage": "Error verifying account"
         }
     }
 }
