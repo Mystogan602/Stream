@@ -54,6 +54,20 @@
             "successAlertDescription": "Chúng tôi đã gửi liên kết đặt lại mật khẩu đến email của bạn. Nếu bạn đã bật thông báo trên Telegram, liên kết cũng đã được gửi đến đó",
             "errorMessage": "Lỗi khi đặt lại mật khẩu",
             "loading": "Đang đặt lại mật khẩu..."
+        },
+        "newPassword": {
+            "heading": "Mật khẩu mới",
+            "backButtonLabel": "Đã có tài khoản? Đăng nhập",
+            "passwordLabel": "Mật khẩu mới",
+            "passwordPlaceholder": "Nhập mật khẩu mới",
+            "passwordDescription": "Mật khẩu mới",
+            "passwordRepeatLabel": "Nhập lại mật khẩu",
+            "passwordRepeatPlaceholder": "Nhập mật khẩu mới",
+            "passwordRepeatDescription": "Nhập lại mật khẩu mới để xác nhận",
+            "submitButton": "Đặt mật khẩu mới",
+            "successMessage": "Mật khẩu đã được thay đổi thành công",
+            "errorMessage": "Lỗi khi đặt mật khẩu mới",
+            "loading": "Đang đặt mật khẩu mới..."
         }
     }
 }

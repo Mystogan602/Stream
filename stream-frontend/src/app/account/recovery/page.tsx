@@ -9,6 +9,6 @@ export async function generateMetadata(): Promise<Metadata> {
 	};
 }
 
-export default function AccountRecoveryPage() {
+export default function ResetPasswordPage() {
 	return <ResetPasswordForm />;
 }

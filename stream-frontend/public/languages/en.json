@@ -54,6 +54,20 @@
             "successAlertDescription": "We have sent a password reset link to your email. If you have Telegram notifications enabled, the link has also been sent there",
             "errorMessage": "Error resetting password",
             "loading": "Resetting password..."
+        },
+        "newPassword": {
+            "heading": "New Password",
+            "backButtonLabel": "Already have an account? Sign in",
+            "passwordLabel": "New Password",
+            "passwordPlaceholder": "Enter your new password",
+            "passwordDescription": "New password",
+            "passwordRepeatLabel": "Repeat Password",
+            "passwordRepeatPlaceholder": "Enter your new password",
+            "passwordRepeatDescription": "Repeat your new password for confirmation",
+            "submitButton": "Set New Password",
+            "successMessage": "Password successfully changed",
+            "errorMessage": "Error when setting a new password",
+            "loading": "Setting new password..."
         }
     }
 }
