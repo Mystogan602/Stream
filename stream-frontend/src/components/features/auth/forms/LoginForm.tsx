@@ -25,10 +25,13 @@ import {
 
 import { useLoginUserMutation } from '@/graphql/generated/output';
 
-import { loginSchema } from '@/schemas/auth/login.schema';
-import { TypeLoginSchema } from '@/schemas/auth/login.schema';
+import {
+	type TypeLoginSchema,
+	loginSchema
+} from '@/schemas/auth/login.schema';
 
 import { AuthWrapper } from '../AuthWrapper';
+import Link from 'next/link';
 
 export function LoginForm() {
 	const t = useTranslations('auth.login');
@@ -77,7 +80,7 @@ export function LoginForm() {
 		<AuthWrapper
 			heading={t('heading')}
 			backButtonLabel={t('backButtonLabel')}
-			backButtonHref='/account/login'
+			backButtonHref='/account/create'
 		>
 			<Form {...form}>
 				<form
@@ -137,9 +140,17 @@ export function LoginForm() {
 								name='password'
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>
-											{t('passwordLabel')}
-										</FormLabel>
+										<div className='flex items-center justify-between'>
+											<FormLabel>
+												{t('passwordLabel')}
+											</FormLabel>
+											<Link
+												href='/account/recovery'
+												className='ml-auto text-sm text-primary'
+											>
+												{t('forgotPassword')}
+											</Link>
+										</div>
 										<FormControl>
 											<Input
 												type='password'

@@ -42,6 +42,18 @@
             "successMessage": "You have successfully logged in",
             "errorMessage": "Error logging in",
             "loading": "Logging in..."
+        },
+        "resetPassword": {
+            "heading": "Reset Password",
+            "backButtonLabel": "Already have an account?",
+            "emailLabel": "Email",
+            "emailPlaceholder": "Enter your email",
+            "emailDescription": "Your email that you entered during registration",
+            "submitButton": "Reset Password",
+            "successAlertTitle": "Link Sent",
+            "successAlertDescription": "We have sent a password reset link to your email. If you have Telegram notifications enabled, the link has also been sent there",
+            "errorMessage": "Error resetting password",
+            "loading": "Resetting password..."
         }
     }
 }

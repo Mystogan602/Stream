@@ -26,7 +26,7 @@ import { Input } from '@/components/ui/common/Input';
 import { useCreateUserMutation } from '@/graphql/generated/output';
 
 import {
-	TypeCreateAccountSchema,
+	type TypeCreateAccountSchema,
 	createAccountSchema
 } from '@/schemas/auth/create-account.schema';
 
