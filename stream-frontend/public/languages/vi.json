@@ -1,51 +1,54 @@
 {
     "layout": {
-        "logo": {
-            "platform": "Nền tảng cho các buổi phát trực tuyến"
-        },
-        "headerMenu": {
-            "login": "Đăng nhập",
-            "register": "Đăng ký",
-            "profileMenu": {
-                "notifications": {
-                    "heading": "Thông báo",
-                    "loading": "Đang tải...",
-                    "empty": "Bạn không có thông báo"
-                },
-                "successMessage": "Bạn đã đăng xuất khỏi hệ thống thành công",
-                "errorMessage": "Lỗi khi đăng xuất",
-                "channel": "Kênh của tôi",
-                "dashboard": "Bảng điều khiển",
-                "logout": "Đăng xuất"
+        "header": {
+            "logo": {
+                "platform": "Nền tảng cho các buổi phát trực tuyến"
+            },
+            "headerMenu": {
+                "login": "Đăng nhập",
+                "register": "Đăng ký",
+                "profileMenu": {
+                    "notifications": {
+                        "heading": "Thông báo",
+                        "loading": "Đang tải...",
+                        "empty": "Bạn không có thông báo"
+                    },
+                    "successMessage": "Bạn đã đăng xuất khỏi hệ thống thành công",
+                    "errorMessage": "Lỗi khi đăng xuất",
+                    "channel": "Kênh của tôi",
+                    "dashboard": "Bảng điều khiển",
+                    "logout": "Đăng xuất"
+                }
+            },
+            "search": {
+                "placeholder": "Tìm kiếm phát trực tuyến"
             }
         },
-        "search": {
-            "placeholder": "Tìm kiếm phát trực tuyến"
-        },
-        "dashboardNav": {
-            "settings": "Cài đặt",
-            "streamSettings": "Cài đặt phát trực tuyến",
-            "keys": "Khóa cho phát trực tuyến",
-            "chatSettings": "Cài đặt trò chuyện",
-            "followers": "Người theo dõi",
-            "sponsors": "Nhà tài trợ",
-            "premium": "Gói cao cấp",
-            "transactions": "Giao dịch"
-        },
-        "sidebarHeader": {
-            "expand": "Mở rộng",
-            "collapse": "Thu gọn",
-            "navigation": "Điều hướng",
-            "forYou": "Dành cho bạn"
-        },
-        "userNav": {
-            "home": "Trang chủ",
-            "categories": "Danh mục",
-            "streams": "Phát trực tuyến",
-            "recommended": "Đề xuất"
-        },
-        "recommended": {
-            "heading": "Đề xuất"
+        "sidebar": {
+            "header": {
+                "expand": "Mở rộng",
+                "collapse": "Thu gọn",
+                "navigation": "Điều hướng"
+            },
+            "dashboardNav": {
+                "settings": "Cài đặt",
+                "streamSettings": "Cài đặt phát trực tuyến",
+                "keys": "Khóa cho phát trực tuyến",
+                "chatSettings": "Cài đặt trò chuyện",
+                "followers": "Người theo dõi",
+                "sponsors": "Nhà tài trợ",
+                "premium": "Gói cao cấp",
+                "transactions": "Giao dịch"
+            },
+            "userNav": {
+                "home": "Trang chủ",
+                "categories": "Danh mục",
+                "streams": "Phát trực tuyến",
+                "recommended": "Đề xuất"
+            },
+            "recommended": {
+                "heading": "Đề xuất"
+            }
         }
     },
     "auth": {

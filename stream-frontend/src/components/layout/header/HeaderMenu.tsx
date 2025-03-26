@@ -9,7 +9,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { ProfileMenu } from './ProfileMenu';
 
 export function HeaderMenu() {
-	const t = useTranslations('layout.headerMenu');
+	const t = useTranslations('layout.header.headerMenu');
 	const { isAuthenticated } = useAuth();
 
 	return (

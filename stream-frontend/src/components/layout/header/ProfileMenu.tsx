@@ -25,7 +25,7 @@ import { useCurrent } from '@/hooks/useCurrent';
 import { Notifications } from './notifications/Notifications';
 
 export function ProfileMenu() {
-	const t = useTranslations('layout.headerMenu.profileMenu');
+	const t = useTranslations('layout.header.headerMenu.profileMenu');
 	const router = useRouter();
 	const { exit } = useAuth();
 	const { user, isLoadingProfile } = useCurrent();

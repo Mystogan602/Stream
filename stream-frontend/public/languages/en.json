@@ -1,51 +1,54 @@
 {
     "layout": {
-        "logo": {
-            "platform": "Platform for streams"
-        },
-        "headerMenu": {
-            "login": "Login",
-            "register": "Register",
-            "profileMenu": {
-                "notifications": {
-                    "heading": "Notifications",
-                    "loading": "Loading...",
-                    "empty": "You have no no notifications"
-                },
-                "successMessage": "You have successfully logged out of the system",
-                "errorMessage": "Error when logging out",
-                "channel": "My Channel",
-                "dashboard": "Dashboard",
-                "logout": "Logout"
+        "header": {
+            "logo": {
+                "platform": "Platform for streams"
+            },
+            "headerMenu": {
+                "login": "Login",
+                "register": "Register",
+                "profileMenu": {
+                    "notifications": {
+                        "heading": "Notifications",
+                        "loading": "Loading...",
+                        "empty": "You have no no notifications"
+                    },
+                    "successMessage": "You have successfully logged out of the system",
+                    "errorMessage": "Error when logging out",
+                    "channel": "My Channel",
+                    "dashboard": "Dashboard",
+                    "logout": "Logout"
+                }
+            },
+            "search": {
+                "placeholder": "Search streams"
             }
         },
-        "search": {
-            "placeholder": "Search streams"
-        },
-        "dashboardNav": {
-            "settings": "Settings",
-            "streamSettings": "Stream Settings",
-            "keys": "Stream Keys",
-            "chatSettings": "Chat Settings",
-            "followers": "Followers",
-            "sponsors": "Sponsors",
-            "premium": "Premium Plans",
-            "transactions": "Transactions"
-        },
-        "sidebarHeader": {
-            "expand": "Expand",
-            "collapse": "Collapse",
-            "navigation": "Navigation",
-            "forYou": "For You"
-        },
-        "userNav": {
-            "home": "Home",
-            "categories": "Categories",
-            "streams": "Streams",
-            "recommended": "Recommendations"
-        },
-        "recommended": {
-            "heading": "Recommendations"
+        "sidebar": {
+            "header": {
+                "expand": "Expand",
+                "collapse": "Collapse",
+                "navigation": "Navigation"
+            },
+            "dashboardNav": {
+                "settings": "Settings",
+                "streamSettings": "Stream Settings",
+                "keys": "Stream Keys",
+                "chatSettings": "Chat Settings",
+                "followers": "Followers",
+                "sponsors": "Sponsors",
+                "premium": "Premium Plans",
+                "transactions": "Transactions"
+            },
+            "userNav": {
+                "home": "Home",
+                "categories": "Categories",
+                "streams": "Streams",
+                "recommended": "Recommendations"
+            },
+            "recommended": {
+                "heading": "Recommendations"
+            }
         }
     },
     "auth": {
