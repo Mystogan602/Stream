@@ -121,5 +121,10 @@
             "errorMessage": "Error when setting a new password",
             "loading": "Setting new password..."
         }
+    },
+    "components": {
+        "liveBadge": {
+            "text": "LIVE"
+        }
     }
 }

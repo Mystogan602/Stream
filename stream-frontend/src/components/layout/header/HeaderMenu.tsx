@@ -4,8 +4,11 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 import { Button } from '@/components/ui/common/Button';
+import { ChangeLanguage } from '@/components/ui/elements/ChangeLanguage';
+import { ModeToggle } from '@/components/ui/elements/ModeToggle';
 
 import { useAuth } from '@/hooks/useAuth';
+
 import { ProfileMenu } from './ProfileMenu';
 
 export function HeaderMenu() {
@@ -14,6 +17,8 @@ export function HeaderMenu() {
 
 	return (
 		<div className='ml-auto flex items-center gap-x-4'>
+			<ChangeLanguage />
+			<ModeToggle />
 			{isAuthenticated ? (
 				<ProfileMenu />
 			) : (

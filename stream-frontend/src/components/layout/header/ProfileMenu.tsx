@@ -13,9 +13,7 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger
 } from '@/components/ui/common/DropdownMenu';
-import { ChangeLanguage } from '@/components/ui/elements/ChangeLanguage';
 import { ChannelAvatar } from '@/components/ui/elements/ChannelAvatar';
-import { ModeToggle } from '@/components/ui/elements/ModeToggle';
 
 import { useLogoutUserMutation } from '@/graphql/generated/output';
 
@@ -45,8 +43,6 @@ export function ProfileMenu() {
 		<Loader className='size-6 animate-spin text-muted-foreground' />
 	) : (
 		<>
-			<ChangeLanguage />
-			<ModeToggle />
 			<Notifications />
 			<DropdownMenu>
 				<DropdownMenuTrigger>

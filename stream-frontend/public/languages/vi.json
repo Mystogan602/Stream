@@ -121,5 +121,10 @@
             "errorMessage": "Lỗi khi đặt mật khẩu mới",
             "loading": "Đang đặt mật khẩu mới..."
         }
+    },
+    "components": {
+        "liveBadge": {
+            "text": "TRỰC TIẾP"
+        }
     }
 }
