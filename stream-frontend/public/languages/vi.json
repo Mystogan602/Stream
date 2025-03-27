@@ -150,6 +150,21 @@
                     "errorUpdateMessage": "Lỗi khi cập nhật ảnh đại diện.",
                     "successRemoveMessage": "Ảnh đại diện đã được xóa thành công.",
                     "errorRemoveMessage": "Lỗi khi xóa ảnh đại diện."
+                },
+                "info": {
+                    "heading": "Cài đặt hồ sơ",
+                    "usernameLabel": "Tên người dùng",
+                    "usernamePlaceholder": "johndoe",
+                    "usernameDescription": "Đây là cách người dùng khác sẽ biết đến bạn.",
+                    "displayNameLabel": "Tên hiển thị",
+                    "displayNamePlaceholder": "John Doe",
+                    "displayNameDescription": "Bạn có thể sử dụng chữ hoa trong tên hiển thị của bạn.",
+                    "bioLabel": "Giới thiệu",
+                    "bioPlaceholder": "Tôi thích lập trình",
+                    "bioDescription": "Thông tin về bạn không nên dài quá 300 ký tự.",
+                    "successMessage": "Hồ sơ đã được cập nhật thành công",
+                    "errorMessage": "Lỗi khi cập nhật hồ sơ",
+                    "submitButton": "Lưu thay đổi"
                 }
             }
         }

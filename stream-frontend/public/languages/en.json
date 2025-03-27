@@ -150,6 +150,21 @@
                     "errorUpdateMessage": "Error updating profile image.",
                     "successRemoveMessage": "Profile image removed successfully.",
                     "errorRemoveMessage": "Error removing profile image."
+                },
+                "info": {
+                    "heading": "Profile Settings",
+                    "usernameLabel": "Username",
+                    "usernamePlaceholder": "johndoe",
+                    "usernameDescription": "This is how other users will know you.",
+                    "displayNameLabel": "Display Name",
+                    "displayNamePlaceholder": "John Doe",
+                    "displayNameDescription": "You can use uppercase letters in your display name as you wish.",
+                    "bioLabel": "About Me",
+                    "bioPlaceholder": "I love programming",
+                    "bioDescription": "The information about yourself should contain no more than 300 characters.",
+                    "successMessage": "Profile successfully updated",
+                    "errorMessage": "Error updating profile",
+                    "submitButton": "Save Changes"
                 }
             }
         }

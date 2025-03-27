@@ -23,7 +23,7 @@ import {
 import { useCurrent } from '@/hooks/useCurrent';
 
 import {
-	TypeUploadFileSchema,
+	type TypeUploadFileSchema,
 	uploadFileSchema
 } from '@/schemas/upload-file.schema';
 
