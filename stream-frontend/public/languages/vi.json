@@ -122,6 +122,19 @@
             "loading": "Đang đặt mật khẩu mới..."
         }
     },
+    "dashboard": {
+        "settings": {
+            "header": {
+                "heading": "Cài đặt",
+                "description": "Ở đây bạn có thể quản lý cài đặt của bạn",
+                "profile": "Hồ sơ",
+                "account": "Tài khoản",
+                "appearance": "Giao diện",
+                "notifications": "Thông báo",
+                "sessions": "Phiên đăng nhập"
+            }
+        }
+    },
     "components": {
         "liveBadge": {
             "text": "TRỰC TIẾP"

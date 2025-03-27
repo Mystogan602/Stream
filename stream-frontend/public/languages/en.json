@@ -122,6 +122,19 @@
             "loading": "Setting new password..."
         }
     },
+    "dashboard": {
+        "settings": {
+            "header": {
+                "heading": "Settings",
+                "description": "Here you can manage your settings",
+                "profile": "Profile",
+                "account": "Account",
+                "appearance": "Appearance",
+                "notifications": "Notifications",
+                "sessions": "Sessions"
+            }
+        }
+    },
     "components": {
         "liveBadge": {
             "text": "LIVE"
