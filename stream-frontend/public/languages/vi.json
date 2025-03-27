@@ -132,12 +132,35 @@
                 "appearance": "Giao diện",
                 "notifications": "Thông báo",
                 "sessions": "Phiên đăng nhập"
+            },
+            "profile": {
+                "header": {
+                    "heading": "Profile",
+                    "description": "Customize your profile by changing your avatar, personal information, and social media links. Update your information so that other users can learn more about you."
+                },
+                "avatar": {
+                    "heading": "Ảnh đại diện",
+                    "updateButton": "Cập nhật ảnh đại diện",
+                    "confirmModal": {
+                        "heading": "Xóa ảnh đại diện",
+                        "message": "Bạn có chắc chắn muốn xóa ảnh đại diện của bạn? Hành động này không thể hoàn tác."
+                    },
+                    "info": "Định dạng hỗ trợ: JPG, JPEG, PNG, WEBP hoặc GIF. Kích thước tối đa: 10 MB.",
+                    "successUpdateMessage": "Ảnh đại diện đã được cập nhật thành công.",
+                    "errorUpdateMessage": "Lỗi khi cập nhật ảnh đại diện.",
+                    "successRemoveMessage": "Ảnh đại diện đã được xóa thành công.",
+                    "errorRemoveMessage": "Lỗi khi xóa ảnh đại diện."
+                }
             }
         }
     },
     "components": {
         "liveBadge": {
             "text": "TRỰC TIẾP"
+        },
+        "confirmModal": {
+            "cancel": "Hủy",
+            "continue": "Tiếp tục"
         }
     }
 }

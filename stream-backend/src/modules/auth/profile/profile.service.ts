@@ -15,7 +15,7 @@ export class ProfileService {
 	public constructor(
 		private readonly prismaService: PrismaService,
 		private readonly storageService: StorageService
-	) {}
+	) { }
 
 	public async changeAvatar(user: User, file: Upload) {
 		if (user.avatar) {
@@ -23,7 +23,7 @@ export class ProfileService {
 		}
 
 		const chunks: Buffer[] = [];
-		for await (const chunk of file.createReadsStream()) {
+		for await (const chunk of file.createReadStream()) {
 			chunks.push(chunk);
 		}
 
@@ -31,7 +31,7 @@ export class ProfileService {
 
 		const fileName = `channels/${user.username}.webp`;
 
-		if (file.filename && file.filename.endWith('.gif')) {
+		if (file.filename && file.filename.endsWith('.gif')) {
 			const processedBuffer = await sharp(buffer, { animated: true })
 				.resize(512, 512)
 				.webp()

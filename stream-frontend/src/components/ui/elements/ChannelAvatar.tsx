@@ -1,4 +1,6 @@
+import { useAvatarStore } from '@/stores/avatar/avatar.store';
 import { type VariantProps, cva } from 'class-variance-authority';
+import { useMemo } from 'react';
 
 import {
 	Avatar,
@@ -16,7 +18,8 @@ const avatarSizes = cva('', {
 		size: {
 			sm: 'size-7',
 			default: 'size-9',
-			lg: 'size-14'
+			lg: 'size-14',
+			xl: 'size-32'
 		}
 	},
 	defaultVariants: {
@@ -30,6 +33,14 @@ interface ChannelAvatarProps extends VariantProps<typeof avatarSizes> {
 }
 
 export function ChannelAvatar({ channel, size, isLive }: ChannelAvatarProps) {
+	const timestamp = useAvatarStore(state => state.timestamp);
+
+	const avatarUrl = useMemo(() => {
+		if (!channel.avatar) return undefined;
+		const url = getMediaSource(channel.avatar);
+		return `${url}?t=${timestamp}`;
+	}, [channel.avatar, timestamp]);
+
 	return (
 		<div className='relative'>
 			<Avatar
@@ -38,12 +49,9 @@ export function ChannelAvatar({ channel, size, isLive }: ChannelAvatarProps) {
 					isLive && 'ring-2 ring-rose-500'
 				)}
 			>
-				<AvatarImage
-					src={getMediaSource(channel.avatar) ?? undefined}
-					className='object-cover'
-				/>
-				<AvatarFallback>
-					{channel.username ? channel.username[0] : ''}
+				<AvatarImage src={avatarUrl} className='object-cover' />
+				<AvatarFallback className={cn(size === 'xl' && 'text-4xl')}>
+					{channel.username?.[0]}
 				</AvatarFallback>
 			</Avatar>
 		</div>

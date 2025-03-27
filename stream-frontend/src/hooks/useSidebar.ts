@@ -1,4 +1,4 @@
-import { sidebarStore } from '@/store/sidebar/sidebar.store'
+import { sidebarStore } from '@/stores/sidebar/sidebar.store'
 
 export function useSidebar() {
     const isCollapsed = sidebarStore((state) => state.isCollapsed)
