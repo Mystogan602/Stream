@@ -165,6 +165,34 @@
                     "successMessage": "Hồ sơ đã được cập nhật thành công",
                     "errorMessage": "Lỗi khi cập nhật hồ sơ",
                     "submitButton": "Lưu thay đổi"
+                },
+                "socialLinks": {
+                    "createForm": {
+                        "heading": "Liên kết mạng xã hội",
+                        "titleLabel": "Tên liên kết",
+                        "titlePlaceholder": "Youtube",
+                        "titleDescription": "Link text",
+                        "urlLabel": "Link URL",
+                        "urlPlaceholder": "https://github.com/Mystogan602",
+                        "urlDescription": "Đâu là liên kết mà bạn muốn đến? Vui lòng nhập đầy đủ URL, ví dụ: https://github.com/Mystogan602",
+                        "submitButton": "Thêm",
+                        "successMessage": "Liên kết mạng xã hội đã được thêm thành công",
+                        "errorMessage": "Lỗi khi thêm liên kết mạng xã hội"
+                    },
+                    "editForm": {
+                        "cancelButton": "Hủy",
+                        "submitButton": "Lưu",
+                        "successUpdateMessage": "Liên kết mạng xã hội đã được cập nhật thành công",
+                        "errorUpdateMessage": "Lỗi khi cập nhật liên kết mạng xã hội",
+                        "successRemoveMessage": "Liên kết mạng xã hội đã được xóa thành công",
+                        "errorRemoveMessage": "Lỗi khi xóa liên kết mạng xã hội",
+                        "confirmModal": {
+                            "heading": "Xóa liên kết mạng xã hội",
+                            "message": "Bạn có chắc chắn muốn xóa liên kết mạng xã hội này? Hành động này không thể hoàn tác."
+                        }
+                    },
+                    "successReorderMessage": "Thứ tự các liên kết mạng xã hội đã được thay đổi",
+                    "errorReorderMessage": "Lỗi khi thay đổi thứ tự các liên kết mạng xã hội"
                 }
             }
         }

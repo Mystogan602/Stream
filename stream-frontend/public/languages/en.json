@@ -165,6 +165,34 @@
                     "successMessage": "Profile successfully updated",
                     "errorMessage": "Error updating profile",
                     "submitButton": "Save Changes"
+                },
+                "socialLinks": {
+                    "createForm": {
+                        "heading": "Social Media Links",
+                        "titleLabel": "Link Title",
+                        "titlePlaceholder": "Youtube",
+                        "titleDescription": "Link text",
+                        "urlLabel": "Link URL",
+                        "urlPlaceholder": "https://github.com/Mystogan602",
+                        "urlDescription": "Where does this link lead? Please enter the full URL, e.g., https://github.com/Mystogan602",
+                        "submitButton": "Add",
+                        "successMessage": "Social media link successfully added",
+                        "errorMessage": "Error adding social media link"
+                    },
+                    "editForm": {
+                        "cancelButton": "Cancel",
+                        "submitButton": "Save",
+                        "successUpdateMessage": "Social media link successfully updated",
+                        "errorUpdateMessage": "Error updating social media link",
+                        "successRemoveMessage": "Social media link successfully removed",
+                        "errorRemoveMessage": "Error removing social media link",
+                        "confirmModal": {
+                            "heading": "Remove Social Media Link",
+                            "message": "Are you sure you want to remove this social media link? This action cannot be undone."
+                        }
+                    },
+                    "successReorderMessage": "Order of social media links changed",
+                    "errorReorderMessage": "Error changing order of social media links"
                 }
             }
         }
