@@ -120,6 +120,19 @@
             "successMessage": "Mật khẩu đã được thay đổi thành công",
             "errorMessage": "Lỗi khi đặt mật khẩu mới",
             "loading": "Đang đặt mật khẩu mới..."
+        },
+        "deactivate": {
+            "heading": "Vô hiệu hóa tài khoản",
+            "backButtonLabel": "Quay lại bảng điều khiển",
+            "emailLabel": "Email",
+            "emailDescription": "Email bạn đã sử dụng khi đăng ký",
+            "passwordLabel": "Mật khẩu",
+            "passwordDescription": "Mật khẩu bạn đã sử dụng khi đăng ký",
+            "pinLabel": "Mã 6 chữ số",
+            "pinDescription": "Một mã đã được gửi đến email của bạn. Nếu bạn đã bật thông báo Telegram, chúng tôi cũng đã gửi mã tại đó",
+            "submitButton": "Vô hiệu hóa",
+            "successMessage": "Bạn đã vô hiệu hóa tài khoản thành công",
+            "errorMessage": "Lỗi khi vô hiệu hóa tài khoản"
         }
     },
     "dashboard": {
@@ -201,7 +214,7 @@
                     "description": "Quản lý cài đặt tài khoản của bạn, bao gồm thay đổi quyền truy cập, bảo mật và tùy chọn hủy kích hoạt.",
                     "securityHeading": "Bảo mật",
                     "securityDescription": "Thiết lập xác thực hai yếu tố và tự động gia hạn để tăng cường bảo vệ dữ liệu của bạn.",
-                    "deactivationHeading": "Hủy kích hoạt",
+                    "deactivationHeading": "Vô hiệu hóa",
                     "deactivationDescription": "Nếu bạn muốn tạm thời hoặc vĩnh viễn vô hiệu hóa tài khoản của mình, hãy sử dụng tùy chọn này. Hãy lưu ý đến hậu quả."
                 },
                 "email": {
@@ -245,13 +258,13 @@
                     }
                 },
                 "deactivation": {
-                    "heading": "Hủy kích hoạt tài khoản",
-                    "description": "Sau khi hủy kích hoạt tài khoản, bạn sẽ không thể đăng nhập. Tài khoản của bạn sẽ bị xóa hoàn toàn sau 7 ngày. Trước đó, bạn có thể liên hệ hỗ trợ để khôi phục quyền truy cập và mở khóa tài khoản.",
+                    "heading": "Vô hiệu hóa tài khoản",
+                    "description": "Sau khi vô hiệu hóa tài khoản, bạn sẽ không thể đăng nhập. Tài khoản của bạn sẽ bị xóa hoàn toàn sau 7 ngày. Trước đó, bạn có thể liên hệ hỗ trợ để khôi phục quyền truy cập và mở khóa tài khoản.",
                     "confirmModal": {
-                        "heading": "Xác nhận hủy kích hoạt",
-                        "message": "Bạn có chắc chắn muốn hủy kích hoạt tài khoản của mình không? Quyền truy cập chỉ có thể được khôi phục trong vòng 7 ngày.",
-                        "deactivateButton": "Hủy kích hoạt"
-                    }
+                        "heading": "Xác nhận vô hiệu hóa",
+                        "message": "Bạn có chắc chắn muốn vô hiệu hóa tài khoản của mình không? Quyền truy cập chỉ có thể được khôi phục trong vòng 7 ngày."
+                    },
+                    "button": "Vô hiệu hóa"
                 }
             }
         }

@@ -72,6 +72,7 @@ export function ChangeEmailForm() {
 								<FormLabel>{t('emailLabel')}</FormLabel>
 								<FormControl>
 									<Input
+										type='email'
 										placeholder='john@doe.com'
 										disabled={isLoadingUpdate}
 										{...field}

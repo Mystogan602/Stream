@@ -24,7 +24,7 @@ export class SessionService {
 		private readonly redis: RedisService,
 		private readonly config: ConfigService,
 		private readonly verificationService: VerificationService
-	) {}
+	) { }
 
 	public async findByUser(request: Request) {
 		const userId = request.session.userId;
@@ -87,7 +87,7 @@ export class SessionService {
 			}
 		});
 
-		if (!user) throw new NotFoundException('Invalid credentials');
+		if (!user || user.isDeactivated) throw new NotFoundException('Invalid credentials');
 
 		const isPasswordValid = await verify(user.password, password);
 

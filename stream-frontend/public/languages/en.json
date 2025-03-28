@@ -120,6 +120,19 @@
             "successMessage": "Password successfully changed",
             "errorMessage": "Error when setting a new password",
             "loading": "Setting new password..."
+        },
+        "deactivate": {
+            "heading": "Deactivate Account",
+            "backButtonLabel": "Go to Dashboard",
+            "emailLabel": "Email",
+            "emailDescription": "Your email that you used during registration",
+            "passwordLabel": "Password",
+            "passwordDescription": "The password you used during registration",
+            "pinLabel": "6-digit code",
+            "pinDescription": "A code has been sent to your email. If you enabled Telegram notifications, we sent the code there as well",
+            "submitButton": "Deactivate",
+            "successMessage": "You have successfully deactivated your account",
+            "errorMessage": "Deactivation error"
         }
     },
     "dashboard": {
@@ -249,9 +262,9 @@
                     "description": "After deactivating your account, you will not be able to log in. Your account will be completely deleted after 7 days. Until then, you can contact support to restore access and unlock your account.",
                     "confirmModal": {
                         "heading": "Deactivation Confirmation",
-                        "message": "Are you sure you want to deactivate your account? Access can only be restored within 7 days.",
-                        "deactivateButton": "Deactivate"
-                    }
+                        "message": "Are you sure you want to deactivate your account? Access can only be restored within 7 days."
+                    },
+                    "button": "Deactivate"
                 }
             }
         }
