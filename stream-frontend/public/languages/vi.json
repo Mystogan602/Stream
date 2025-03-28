@@ -135,8 +135,8 @@
             },
             "profile": {
                 "header": {
-                    "heading": "Profile",
-                    "description": "Customize your profile by changing your avatar, personal information, and social media links. Update your information so that other users can learn more about you."
+                    "heading": "Hồ sơ",
+                    "description": "Tùy chỉnh hồ sơ của bạn bằng cách thay đổi ảnh đại diện, thông tin cá nhân và liên kết mạng xã hội. Cập nhật thông tin của bạn để người dùng khác có thể tìm hiểu thêm về bạn."
                 },
                 "avatar": {
                     "heading": "Ảnh đại diện",
@@ -193,6 +193,65 @@
                     },
                     "successReorderMessage": "Thứ tự các liên kết mạng xã hội đã được thay đổi",
                     "errorReorderMessage": "Lỗi khi thay đổi thứ tự các liên kết mạng xã hội"
+                }
+            },
+            "account": {
+                "header": {
+                    "heading": "Tài khoản",
+                    "description": "Quản lý cài đặt tài khoản của bạn, bao gồm thay đổi quyền truy cập, bảo mật và tùy chọn hủy kích hoạt.",
+                    "securityHeading": "Bảo mật",
+                    "securityDescription": "Thiết lập xác thực hai yếu tố và tự động gia hạn để tăng cường bảo vệ dữ liệu của bạn.",
+                    "deactivationHeading": "Hủy kích hoạt",
+                    "deactivationDescription": "Nếu bạn muốn tạm thời hoặc vĩnh viễn vô hiệu hóa tài khoản của mình, hãy sử dụng tùy chọn này. Hãy lưu ý đến hậu quả."
+                },
+                "email": {
+                    "heading": "Địa chỉ Email",
+                    "emailLabel": "Email",
+                    "emailDescription": "Nhập địa chỉ email mới của bạn. Hãy đảm bảo email hợp lệ, vì các thông báo sẽ được gửi đến đó.",
+                    "submitButton": "Lưu",
+                    "successMessage": "Email đã được cập nhật thành công",
+                    "errorMessage": "Lỗi khi cập nhật email"
+                },
+                "password": {
+                    "heading": "Mật khẩu tài khoản",
+                    "oldPasswordLabel": "Mật khẩu cũ",
+                    "oldPasswordDescription": "Nhập mật khẩu cũ của bạn để xác minh danh tính trước khi thay đổi mật khẩu. Điều này cần thiết để đảm bảo an toàn cho tài khoản của bạn.",
+                    "newPasswordLabel": "Mật khẩu mới",
+                    "newPasswordDescription": "Mật khẩu mới của bạn phải dài ít nhất 8 ký tự. Nên sử dụng các ký tự đặc biệt để tăng cường bảo mật.",
+                    "submitButton": "Lưu",
+                    "successMessage": "Mật khẩu đã được cập nhật thành công",
+                    "errorMessage": "Lỗi khi cập nhật mật khẩu"
+                },
+                "twoFactor": {
+                    "heading": "Xác thực TOTP",
+                    "description": "Tăng cường bảo mật tài khoản của bạn bằng cách bật xác thực TOTP. Lớp bảo vệ bổ sung này yêu cầu nhập một mã duy nhất, giúp tài khoản của bạn ít bị truy cập trái phép hơn.",
+                    "enable": {
+                        "trigger": "Kích hoạt",
+                        "heading": "Kích hoạt TOTP",
+                        "qrInstructions": "Quét mã QR để thêm TOTP",
+                        "secretCodeLabel": "Mã bí mật: ",
+                        "pinLabel": "Mã PIN",
+                        "pinDescription": "Vui lòng nhập mã 6 chữ số được cung cấp bởi ứng dụng xác thực của bạn.",
+                        "submitButton": "Xác nhận",
+                        "successMessage": "Xác thực TOTP đã được kích hoạt",
+                        "errorMessage": "Lỗi xác minh mã"
+                    },
+                    "disable": {
+                        "trigger": "Vô hiệu hóa",
+                        "heading": "Bạn có chắc chắn muốn vô hiệu hóa TOTP không?",
+                        "message": "Việc vô hiệu hóa xác thực TOTP sẽ làm giảm độ an toàn của tài khoản. Bạn có chắc chắn muốn tiếp tục không?",
+                        "successMessage": "Xác thực TOTP đã được vô hiệu hóa",
+                        "errorMessage": "Lỗi khi vô hiệu hóa"
+                    }
+                },
+                "deactivation": {
+                    "heading": "Hủy kích hoạt tài khoản",
+                    "description": "Sau khi hủy kích hoạt tài khoản, bạn sẽ không thể đăng nhập. Tài khoản của bạn sẽ bị xóa hoàn toàn sau 7 ngày. Trước đó, bạn có thể liên hệ hỗ trợ để khôi phục quyền truy cập và mở khóa tài khoản.",
+                    "confirmModal": {
+                        "heading": "Xác nhận hủy kích hoạt",
+                        "message": "Bạn có chắc chắn muốn hủy kích hoạt tài khoản của mình không? Quyền truy cập chỉ có thể được khôi phục trong vòng 7 ngày.",
+                        "deactivateButton": "Hủy kích hoạt"
+                    }
                 }
             }
         }

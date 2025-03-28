@@ -7,9 +7,12 @@ import {
 	TabsTrigger
 } from '@/components/ui/common/Tabs';
 import { Heading } from '@/components/ui/elements/Heading';
+
 import { ChangeAvatarForm } from './profile/ChangeAvatarForm';
 import { ChangeInfoForm } from './profile/ChangeInfoForm';
 import { SocialLinksForm } from './profile/social-links-form/SocialLinksForm';
+import { ChangeEmailForm } from './account/ChangeEmailForm';
+import { ChangePasswordForm } from './account/ChangePasswordForm';
 
 export function UserSettings() {
 	const t = useTranslations('dashboard.settings');
@@ -49,7 +52,16 @@ export function UserSettings() {
 						<SocialLinksForm />
 					</div>
 				</TabsContent>
-				<TabsContent value='account'></TabsContent>
+				<TabsContent value='account'>
+					<div className='mt-5 space-y-6'>
+						<Heading
+							title={t('account.header.heading')}
+							description={t('account.header.description')}
+						/>
+						<ChangeEmailForm />
+						<ChangePasswordForm />
+					</div>
+				</TabsContent>
 				<TabsContent value='appearance'></TabsContent>
 				<TabsContent value='notifications'></TabsContent>
 				<TabsContent value='sessions'></TabsContent>
