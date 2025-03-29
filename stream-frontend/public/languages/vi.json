@@ -287,6 +287,21 @@
                     "heading": "Màu chủ đạo",
                     "description": "Chọn một màu chủ đạo cho giao diện"
                 }
+            },
+            "notifications": {
+                "header": {
+                    "heading": "Thông báo",
+                    "description": "Cấu hình cách bạn muốn nhận thông báo từ MysStream. Bạn sẽ nhận được thông báo về thời gian bắt đầu phát trực tiếp trên các kênh mà bạn đã đăng ký, cũng như thông báo về những người theo dõi mới."
+                },
+                "siteNotifications": {
+                    "heading": "Thông báo trên trang web",
+                    "description": "Nếu bạn tắt thông báo trên trang web, bạn sẽ không nhận được thông báo về người đăng ký mới cho kênh của mình và thông báo về các luồng phát trực tiếp mới."
+                },
+                "telegramNotifications": {
+                    "heading": "Thông báo qua Telegram",
+                    "description": "Nếu bạn bật thông báo qua Telegram, tài khoản MysStream của bạn sẽ được liên kết với tài khoản Telegram của bạn, và bạn sẽ nhận được tin nhắn về người đăng ký mới, luồng phát trực tiếp mới, đặt lại mật khẩu và mã xác thực hai yếu tố."
+                },
+                "successMessage": "Cài đặt thông báo đã được cập nhật thành công."
             }
         }
     },

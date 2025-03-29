@@ -287,6 +287,21 @@
                     "heading": "Accent Color",
                     "description": "Choose an accent color for the interface"
                 }
+            },
+            "notifications": {
+                "header": {
+                    "heading": "Notifications",
+                    "description": "Configure how you want to receive notifications from MysStream. You will receive notifications about the start of streams on the channels you are subscribed to, as well as about new followers."
+                },
+                "siteNotifications": {
+                    "heading": "Site Notifications",
+                    "description": "If you turn off site notifications, you will not receive notifications about new subscribers to your channel and notifications about new streams."
+                },
+                "telegramNotifications": {
+                    "heading": "Telegram Notifications",
+                    "description": "If you enable notifications via Telegram, your MysStream account will be linked to your Telegram account, and you will receive messages about new subscriptions, new streams, password resets, and two-factor authentication codes."
+                },
+                "successMessage": "Notification settings have been successfully updated."
             }
         }
     },

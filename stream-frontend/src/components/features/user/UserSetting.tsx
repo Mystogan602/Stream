@@ -12,12 +12,13 @@ import { ChangeEmailForm } from './account/ChangeEmailForm';
 import { ChangePasswordForm } from './account/ChangePasswordForm';
 import { DeactivateCard } from './account/DeactivateCard';
 import { WrapperTotp } from './account/totp/WrapperTotp';
+import { ChangeColorForm } from './appearance/ChangeColorForm';
+import { ChangeLanguageForm } from './appearance/ChangeLanguageForm';
+import { ChangeThemeForm } from './appearance/ChangeThemeForm';
+import { ChangeNotificationsSettingsForm } from './notifications/ChangeNotificationsSettingsForm';
 import { ChangeAvatarForm } from './profile/ChangeAvatarForm';
 import { ChangeInfoForm } from './profile/ChangeInfoForm';
 import { SocialLinksForm } from './profile/social-links-form/SocialLinksForm';
-import { ChangeThemeForm } from './appearance/ChangeThemeForm';
-import { ChangeLanguageForm } from './appearance/ChangeLanguageForm';
-import { ChangeColorForm } from './appearance/ChangeColorForm';
 
 export function UserSettings() {
 	const t = useTranslations('dashboard.settings');
@@ -92,7 +93,15 @@ export function UserSettings() {
 						<ChangeColorForm />
 					</div>
 				</TabsContent>
-				<TabsContent value='notifications'></TabsContent>
+				<TabsContent value='notifications'>
+					<div className='mt-5 space-y-6'>
+						<Heading
+							title={t('notifications.header.heading')}
+							description={t('notifications.header.description')}
+						/>
+						<ChangeNotificationsSettingsForm />
+					</div>
+				</TabsContent>
 				<TabsContent value='sessions'></TabsContent>
 			</Tabs>
 		</div>

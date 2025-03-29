@@ -12,7 +12,7 @@ export class AccountService {
 	public constructor(
 		private readonly prisma: PrismaService,
 		private readonly verificationService: VerificationService
-	) {}
+	) { }
 
 	public async me(id: string) {
 		const user = await this.prisma.user.findUnique({
@@ -20,10 +20,15 @@ export class AccountService {
 				id
 			},
 			include: {
-				socialLinks: true
+				socialLinks: true,
+				notificationSettings: true
 			}
 		});
-		return user;
+
+		return {
+			...user,
+			notificationSettings: user?.notificationSettings ? [user.notificationSettings] : []
+		};
 	}
 
 	public async createUser(input: CreateUserInput) {
