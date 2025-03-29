@@ -302,6 +302,33 @@
                     "description": "Nếu bạn bật thông báo qua Telegram, tài khoản MysStream của bạn sẽ được liên kết với tài khoản Telegram của bạn, và bạn sẽ nhận được tin nhắn về người đăng ký mới, luồng phát trực tiếp mới, đặt lại mật khẩu và mã xác thực hai yếu tố."
                 },
                 "successMessage": "Cài đặt thông báo đã được cập nhật thành công."
+            },
+            "sessions": {
+                "header": {
+                    "heading": "Phiên đăng nhập",
+                    "description": "Các phiên đăng nhập là các thiết bị mà bạn đang sử dụng hoặc đã sử dụng để truy cập vào tài khoản MysStream của mình. Tại đây, bạn có thể xem các phiên đang hoạt động ngay bây giờ."
+                },
+                "info": {
+                    "current": "Phiên hiện tại",
+                    "active": "Phiên đang hoạt động",
+                    "notFound": "Không tìm thấy phiên nào đang hoạt động"
+                },
+                "sessionItem": {
+                    "deleteButton": "Xóa",
+                    "detailsButton": "Chi tiết",
+                    "confirmModal": {
+                        "heading": "Xóa phiên đăng nhập",
+                        "message": "Bạn có chắc chắn muốn xóa phiên này không? Hành động này sẽ xóa vĩnh viễn phiên đăng nhập trên thiết bị này và kết thúc tất cả các hoạt động đang diễn ra liên quan đến nó."
+                    },
+                    "successMessage": "Phiên đăng nhập đã bị xóa"
+                },
+                "sessionModal": {
+                    "heading": "Thông tin phiên đăng nhập",
+                    "device": "Thiết bị:",
+                    "location": "Vị trí:",
+                    "ipAddress": "Địa chỉ IP:",
+                    "createdAt": "Thời gian tạo:"
+                }
             }
         }
     },
@@ -312,6 +339,24 @@
         "confirmModal": {
             "cancel": "Hủy",
             "continue": "Tiếp tục"
+        }
+    },
+    "utils": {
+        "formatDate": {
+            "months": {
+                "january": "Tháng Một",
+                "february": "Tháng Hai",
+                "march": "Tháng Ba",
+                "april": "Tháng Tư",
+                "may": "Tháng Năm",
+                "june": "Tháng Sáu",
+                "july": "Tháng Bảy",
+                "august": "Tháng Tám",
+                "september": "Tháng Chín",
+                "october": "Tháng Mười",
+                "november": "Tháng Mười Một",
+                "december": "Tháng Mười Hai"
+            }
         }
     }
 }
