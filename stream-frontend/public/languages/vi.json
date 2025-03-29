@@ -330,6 +330,58 @@
                     "createdAt": "Thời gian tạo:"
                 }
             }
+        },
+        "keys": {
+            "header": {
+                "heading": "Khóa Stream",
+                "description": "Tạo URL và khóa để phát trực tiếp."
+            },
+            "url": {
+                "heading": "URL"
+            },
+            "key": {
+                "heading": "Khóa"
+            },
+            "instructionModal": {
+                "trigger": "Hướng dẫn",
+                "heading": "Hướng dẫn thiết lập OBS để phát trực tiếp",
+                "description": "Để bắt đầu chia sẻ nội dung với khán giả, hãy làm theo hướng dẫn từng bước để kết nối OBS Studio. Chỉ cần vài bước là bạn có thể lên sóng ngay!",
+                "step1Title": "Bước 1: Tải xuống OBS Studio và tạo URL máy chủ cùng Khóa Stream",
+                "step1Description": "Để phát trực tiếp, bạn cần hai yếu tố quan trọng: URL máy chủ và Khóa Stream. Hãy làm theo các bước sau:",
+                "downloadObs": "Tải xuống OBS Studio",
+                "downloadObsDescription": "Trước khi thiết lập luồng phát, hãy tải xuống và cài đặt chương trình.",
+                "obsLinkText": "OBS Studio",
+                "copyKeys": "Sao chép URL máy chủ và Khóa Stream",
+                "copyKeysDescription": "Sau khi tạo, bạn sẽ thấy hai trường: URL máy chủ và Khóa Stream. Nhấp vào biểu tượng sao chép bên cạnh mỗi trường để lưu vào bộ nhớ tạm.",
+                "step2Title": "Bước 2: Cấu hình OBS Studio",
+                "step2Description": "Bây giờ bạn đã có dữ liệu cần thiết, hãy thiết lập OBS để hoạt động với luồng phát trực tiếp của bạn:",
+                "openObs": "Mở OBS Studio",
+                "openObsDescription": "Nếu OBS chưa được cài đặt, hãy tải về từ trang web chính thức và cài đặt. Sau khi khởi chạy, màn hình chính của OBS sẽ hiển thị.",
+                "openStreamSettings": "Mở cài đặt Stream",
+                "openStreamSettingsDescription": "Trên thanh menu, nhấp vào 'Tệp' → 'Cài đặt'. Chuyển đến tab 'Stream'.",
+                "enterDetails": "Nhập thông tin của bạn",
+                "enterDetailsDescription": "Trong trường 'Dịch vụ', chọn 'Tùy chỉnh...'. Dán URL máy chủ đã sao chép vào trường 'URL'. Trong trường 'Khóa Stream', nhập Khóa Stream của bạn.",
+                "saveSettings": "Lưu cài đặt",
+                "saveSettingsDescription": "Nhấp vào 'Áp dụng' và sau đó 'OK' để lưu các thay đổi.",
+                "step3Title": "Bước 3: Bắt đầu phát trực tiếp",
+                "step3Description": "Sau khi thiết lập OBS thành công, bạn đã sẵn sàng để phát trực tiếp:",
+                "startStream": "Bắt đầu phát trực tiếp",
+                "startStreamDescription": "Quay lại màn hình chính của OBS và nhấp vào nút 'Bắt đầu phát trực tiếp'.",
+                "monitorStream": "Theo dõi luồng phát",
+                "monitorStreamDescription": "Luồng của bạn sẽ bắt đầu ngay lập tức và bạn có thể theo dõi nó cả trên nền tảng lẫn trong OBS.",
+                "congrats": "Chúc mừng! Bạn đã thiết lập OBS thành công để phát trực tiếp trên nền tảng của chúng tôi. Khán giả đang chờ đón những khoảnh khắc hấp dẫn và nội dung mới!",
+                "close": "Đóng"
+            },
+            "createModal": {
+                "trigger": "Tạo khóa",
+                "heading": "Tạo khóa",
+                "ingressTypeLabel": "Loại kết nối",
+                "ingressTypePlaceholder": "Chọn loại kết nối",
+                "ingressTypeDescription": "Chọn RTMP để phát sóng truyền thống hoặc WHIP để kết nối WebRTC.",
+                "submitButton": "Tạo",
+                "successMessage": "Đã tạo kết nối đầu vào",
+                "errorMessage": "Lỗi khi tạo kết nối đầu vào"
+            }
         }
     },
     "components": {
@@ -339,6 +391,9 @@
         "confirmModal": {
             "cancel": "Hủy",
             "continue": "Tiếp tục"
+        },
+        "copyButton": {
+            "successMessage": "Đã sao chép vào bộ nhớ tạm"
         }
     },
     "utils": {
