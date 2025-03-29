@@ -10,11 +10,14 @@ import { Heading } from '@/components/ui/elements/Heading';
 
 import { ChangeEmailForm } from './account/ChangeEmailForm';
 import { ChangePasswordForm } from './account/ChangePasswordForm';
+import { DeactivateCard } from './account/DeactivateCard';
 import { WrapperTotp } from './account/totp/WrapperTotp';
 import { ChangeAvatarForm } from './profile/ChangeAvatarForm';
 import { ChangeInfoForm } from './profile/ChangeInfoForm';
 import { SocialLinksForm } from './profile/social-links-form/SocialLinksForm';
-import { DeactivateCard } from './account/DeactivateCard';
+import { ChangeThemeForm } from './appearance/ChangeThemeForm';
+import { ChangeLanguageForm } from './appearance/ChangeLanguageForm';
+import { ChangeColorForm } from './appearance/ChangeColorForm';
 
 export function UserSettings() {
 	const t = useTranslations('dashboard.settings');
@@ -78,7 +81,17 @@ export function UserSettings() {
 						<DeactivateCard />
 					</div>
 				</TabsContent>
-				<TabsContent value='appearance'></TabsContent>
+				<TabsContent value='appearance'>
+					<div className='mt-5 space-y-6'>
+						<Heading
+							title={t('appearance.header.heading')}
+							description={t('appearance.header.description')}
+						/>
+						<ChangeThemeForm />
+						<ChangeLanguageForm />
+						<ChangeColorForm />
+					</div>
+				</TabsContent>
 				<TabsContent value='notifications'></TabsContent>
 				<TabsContent value='sessions'></TabsContent>
 			</Tabs>

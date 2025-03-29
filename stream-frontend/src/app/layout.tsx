@@ -1,12 +1,17 @@
+import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
-import '@/styles/globals.css';
-import { ApolloClientProvider } from '@/providers/ApolloClientProvider';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { getLocale } from 'next-intl/server';
-import { GeistSans } from 'geist/font/sans';
+
+import { ColorSwitcher } from '@/components/ui/elements/ColorSwitcher';
+
+import { ApolloClientProvider } from '@/providers/ApolloClientProvider';
 import { ThemeProvider } from '@/providers/ThemeProvider';
 import { ToastProvider } from '@/providers/ToastProvider';
+
+import '@/styles/globals.css';
+import '@/styles/themes.css';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -14,32 +19,31 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({
-  children,
+	children
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  const locale = await getLocale();
-  const messages = await getMessages();
+	const locale = await getLocale();
+	const messages = await getMessages();
 
-  return (
-    <html lang={locale} suppressHydrationWarning>
-      <body
-        className={`${GeistSans.variable} antialiased`}
-      >
-        <ApolloClientProvider>
-          <NextIntlClientProvider messages={messages}>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <ToastProvider />
-              {children}
-            </ThemeProvider>
-          </NextIntlClientProvider>
-        </ApolloClientProvider>
-      </body>
-    </html>
-  );
+	return (
+		<html lang={locale} suppressHydrationWarning>
+			<body className={`${GeistSans.variable} antialiased`}>
+				<ColorSwitcher />
+				<ApolloClientProvider>
+					<NextIntlClientProvider messages={messages}>
+						<ThemeProvider
+							attribute='class'
+							defaultTheme='system'
+							enableSystem
+							disableTransitionOnChange
+						>
+							<ToastProvider />
+							{children}
+						</ThemeProvider>
+					</NextIntlClientProvider>
+				</ApolloClientProvider>
+			</body>
+		</html>
+	);
 }
