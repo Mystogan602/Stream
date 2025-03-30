@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Card } from '@/components/ui/common/Card';
 import { ChannelAvatar } from '@/components/ui/elements/ChannelAvatar';

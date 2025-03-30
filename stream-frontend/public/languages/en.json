@@ -496,6 +496,10 @@
         },
         "dataTable": {
             "notFound": "Nothing found"
+        },
+        "emptyState": {
+            "heading": "Nothing found",
+            "text": "We've searched every corner of our site, but unfortunately, nothing was found for your request. Maybe you could try something else?"
         }
     },
     "utils": {

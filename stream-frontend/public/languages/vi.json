@@ -496,6 +496,10 @@
         },
         "dataTable": {
             "notFound": "Không tìm thấy"
+        },
+        "emptyState": {
+            "heading": "Không tìm thấy",
+            "text": "Chúng tôi đã tìm khắp mọi ngóc ngách trên trang web, nhưng rất tiếc không có kết quả nào phù hợp với yêu cầu của bạn. Có thể bạn muốn thử lại với nội dung khác?"
         }
     },
     "utils": {
