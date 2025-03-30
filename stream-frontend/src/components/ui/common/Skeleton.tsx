@@ -6,7 +6,7 @@ function Skeleton({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
 	return (
 		<div
 			className={cn(
-				'animate-pulse rounded-md bg-muted dark:bg-muted',
+				'animate-pulse rounded-lg bg-card dark:bg-muted',
 				className
 			)}
 			{...props}

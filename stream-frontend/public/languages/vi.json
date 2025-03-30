@@ -382,6 +382,26 @@
                 "successMessage": "Đã tạo kết nối đầu vào",
                 "errorMessage": "Lỗi khi tạo kết nối đầu vào"
             }
+        },
+        "chat": {
+            "header": {
+                "heading": "Cài đặt Chat",
+                "description": "Tại đây, bạn có thể quản lý cài đặt chat của mình."
+            },
+            "isChatEnabled": {
+                "heading": "Bật Chat",
+                "description": "Nếu bạn bật chat, người xem sẽ có thể gửi tin nhắn trong suốt buổi phát sóng của bạn."
+            },
+            "isChatFollowersOnly": {
+                "heading": "Chỉ cho người theo dõi",
+                "description": "Nếu bạn bật cài đặt này, chỉ những người theo dõi bạn mới có thể gửi tin nhắn trong chat."
+            },
+            "isChatPremiumFollowersOnly": {
+                "heading": "Chỉ cho người theo dõi Premium",
+                "description": "Nếu bạn bật cài đặt này, chỉ những người theo dõi Premium mới có thể gửi tin nhắn trong chat."
+            },
+            "successMessage": "Cập nhật cài đặt chat thành công.",
+            "errorMessage": "Lỗi khi cập nhật cài đặt chat."
         }
     },
     "components": {

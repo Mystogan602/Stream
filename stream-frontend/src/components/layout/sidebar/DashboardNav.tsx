@@ -27,7 +27,7 @@ export function DashboardNav() {
 		},
 		{
 			label: t('chatSettings'),
-			href: '/dashboard/chat-settings',
+			href: '/dashboard/chat',
 			icon: MessageSquare
 		},
 		{

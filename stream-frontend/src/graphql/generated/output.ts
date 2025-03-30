@@ -640,6 +640,13 @@ export type VerifyAccountMutationVariables = Exact<{
 
 export type VerifyAccountMutation = { __typename?: 'Mutation', verifyAccount: { __typename?: 'UserModel', isEmailVerified: boolean } };
 
+export type ChangeChatSettingsMutationVariables = Exact<{
+  data: ChangeChatSettingsInput;
+}>;
+
+
+export type ChangeChatSettingsMutation = { __typename?: 'Mutation', changeChatSettings: boolean };
+
 export type CreateIngressMutationVariables = Exact<{
   ingressType: Scalars['Float']['input'];
 }>;
@@ -756,7 +763,7 @@ export type FindNotificationsUnreadCountQuery = { __typename?: 'Query', findNoti
 export type FindProfileQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindProfileQuery = { __typename?: 'Query', findProfile: { __typename?: 'UserModel', username: string, displayName: string, email: string, avatar?: string | null, bio?: string | null, isTotpEnabled: boolean, notificationSettings: Array<{ __typename?: 'NotificationSettingsModel', siteNotifications: boolean, telegramNotifications: boolean }>, stream: { __typename?: 'StreamModel', serverUrl?: string | null, streamKey?: string | null } } };
+export type FindProfileQuery = { __typename?: 'Query', findProfile: { __typename?: 'UserModel', username: string, displayName: string, email: string, avatar?: string | null, bio?: string | null, isTotpEnabled: boolean, notificationSettings: Array<{ __typename?: 'NotificationSettingsModel', siteNotifications: boolean, telegramNotifications: boolean }>, stream: { __typename?: 'StreamModel', serverUrl?: string | null, streamKey?: string | null, isChatEnabled: boolean, isChatFollowersOnly: boolean, isChatPremiumFollowersOnly: boolean } } };
 
 export type FindSessionsByUserQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -1007,6 +1014,37 @@ export function useVerifyAccountMutation(baseOptions?: Apollo.MutationHookOption
 export type VerifyAccountMutationHookResult = ReturnType<typeof useVerifyAccountMutation>;
 export type VerifyAccountMutationResult = Apollo.MutationResult<VerifyAccountMutation>;
 export type VerifyAccountMutationOptions = Apollo.BaseMutationOptions<VerifyAccountMutation, VerifyAccountMutationVariables>;
+export const ChangeChatSettingsDocument = gql`
+    mutation ChangeChatSettings($data: ChangeChatSettingsInput!) {
+  changeChatSettings(data: $data)
+}
+    `;
+export type ChangeChatSettingsMutationFn = Apollo.MutationFunction<ChangeChatSettingsMutation, ChangeChatSettingsMutationVariables>;
+
+/**
+ * __useChangeChatSettingsMutation__
+ *
+ * To run a mutation, you first call `useChangeChatSettingsMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useChangeChatSettingsMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [changeChatSettingsMutation, { data, loading, error }] = useChangeChatSettingsMutation({
+ *   variables: {
+ *      data: // value for 'data'
+ *   },
+ * });
+ */
+export function useChangeChatSettingsMutation(baseOptions?: Apollo.MutationHookOptions<ChangeChatSettingsMutation, ChangeChatSettingsMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<ChangeChatSettingsMutation, ChangeChatSettingsMutationVariables>(ChangeChatSettingsDocument, options);
+      }
+export type ChangeChatSettingsMutationHookResult = ReturnType<typeof useChangeChatSettingsMutation>;
+export type ChangeChatSettingsMutationResult = Apollo.MutationResult<ChangeChatSettingsMutation>;
+export type ChangeChatSettingsMutationOptions = Apollo.BaseMutationOptions<ChangeChatSettingsMutation, ChangeChatSettingsMutationVariables>;
 export const CreateIngressDocument = gql`
     mutation CreateIngress($ingressType: Float!) {
   createIngress(ingressType: $ingressType)
@@ -1636,6 +1674,9 @@ export const FindProfileDocument = gql`
     stream {
       serverUrl
       streamKey
+      isChatEnabled
+      isChatFollowersOnly
+      isChatPremiumFollowersOnly
     }
   }
 }
