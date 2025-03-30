@@ -427,7 +427,43 @@
                 "actions": "Hành động",
                 "viewChannel": "Xem kênh"
             }
+        },
+        "plans": {
+            "header": {
+                "heading": "Gói Premium",
+                "description": "Dưới đây là danh sách các gói premium dành cho kênh của bạn."
+            },
+            "alert": {
+                "heading": "Yêu cầu xác minh kênh",
+                "description": "Để tạo gói premium, kênh của bạn phải được xác minh. Bạn chỉ cần 10 người đăng ký để nhận dấu xác minh và mở khóa tính năng này."
+            },
+            "createForm": {
+                "trigger": "Tạo gói",
+                "heading": "Tạo gói mới",
+                "titleLabel": "Tiêu đề",
+                "titlePlaceholder": "Gói đăng ký premium cho kênh",
+                "titleDescription": "Nhập tên của gói đăng ký. Tên này sẽ hiển thị cho người đăng ký của bạn.",
+                "descriptionLabel": "Mô tả",
+                "descriptionPlaceholder": "Mô tả về gói đăng ký",
+                "descriptionDescription": "Hãy mô tả những gì gói đăng ký bao gồm. Điều này sẽ giúp người đăng ký hiểu rõ lợi ích của gói.",
+                "priceLabel": "Giá (VNĐ)",
+                "pricePlaceholder": "100000",
+                "priceDescription": "Xác định giá của gói theo đơn vị tiền tệ. Đây là số tiền mà người dùng sẽ phải trả để đăng ký.",
+                "submitButton": "Tạo",
+                "successMessage": "Gói premium đã được tạo",
+                "errorMessage": "Lỗi khi tạo gói"
+            },
+            "columns": {
+                "date": "Ngày tạo",
+                "title": "Tiêu đề",
+                "price": "Giá",
+                "actions": "Hành động",
+                "remove": "Xóa",
+                "successMessage": "Gói đã được xóa thành công",
+                "removeMessage": "Lỗi khi xóa gói"
+            }
         }
+
     },
     "components": {
         "liveBadge": {

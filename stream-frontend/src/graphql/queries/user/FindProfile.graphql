@@ -5,12 +5,13 @@ query FindProfile {
 		email
 		avatar
 		bio
+		isVerified
 		isTotpEnabled
 		notificationSettings {
 			siteNotifications
 			telegramNotifications
 		}
-		stream{
+		stream {
 			serverUrl
 			streamKey
 			isChatEnabled
