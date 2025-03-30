@@ -462,8 +462,22 @@
                 "successMessage": "Gói đã được xóa thành công",
                 "removeMessage": "Lỗi khi xóa gói"
             }
+        },
+        "transactions": {
+            "header": {
+                "heading": "Giao dịch",
+                "description": "Đây là các giao dịch liên quan đến tài trợ kênh."
+            },
+            "columns": {
+                "date": "Ngày tạo",
+                "status": "Trạng thái",
+                "success": "Thành công",
+                "pending": "Đang chờ xử lý",
+                "failed": "Thất bại",
+                "expired": "Hết hạn",
+                "amount": "Số tiền"
+            }
         }
-
     },
     "components": {
         "liveBadge": {
