@@ -26,7 +26,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
 
 	return (
 		<Link
-			href={`/category/${category.slug}`}
+			href={`/categories/${category.slug}`}
 			className='h-full w-full space-y-3'
 		>
 			<div

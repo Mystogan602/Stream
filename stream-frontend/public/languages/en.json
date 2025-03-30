@@ -55,6 +55,12 @@
         "streamsHeading": "Channels You Might Like",
         "categoriesHeading": "Categories You Might Like"
     },
+    "categories": {
+        "heading": "Categories",
+        "overview": {
+            "heading": "Streams in this category"
+        }
+    },
     "auth": {
         "register": {
             "heading": "Register for MysStream",

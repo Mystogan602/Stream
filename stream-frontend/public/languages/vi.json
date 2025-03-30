@@ -55,6 +55,12 @@
         "streamsHeading": "Kênh Có Thể Bạn Sẽ Thích",
         "categoriesHeading": "Danh Mục Có Thể Bạn Quan Tâm"
     },
+    "categories": {
+        "heading": "Danh mục",
+        "overview": {
+            "heading": "Các kênh trong danh mục này"
+        }
+    },
     "auth": {
         "register": {
             "heading": "Đăng ký MysStream",
