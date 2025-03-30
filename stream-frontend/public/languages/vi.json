@@ -414,6 +414,19 @@
                 "actions": "Hành động",
                 "viewChannel": "Xem kênh"
             }
+        },
+        "sponsors": {
+            "header": {
+                "heading": "Nhà tài trợ",
+                "description": "Dưới đây là danh sách tất cả các nhà tài trợ của bạn."
+            },
+            "columns": {
+                "date": "Ngày hết hạn",
+                "user": "Người dùng",
+                "plan": "Gói tài trợ",
+                "actions": "Hành động",
+                "viewChannel": "Xem kênh"
+            }
         }
     },
     "components": {
