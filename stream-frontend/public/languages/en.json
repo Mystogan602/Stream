@@ -51,6 +51,10 @@
             }
         }
     },
+    "home": {
+        "streamsHeading": "Channels You Might Like",
+        "categoriesHeading": "Categories You Might Like"
+    },
     "auth": {
         "register": {
             "heading": "Register for MysStream",

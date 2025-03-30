@@ -51,6 +51,10 @@
             }
         }
     },
+    "home": {
+        "streamsHeading": "Kênh Có Thể Bạn Sẽ Thích",
+        "categoriesHeading": "Danh Mục Có Thể Bạn Quan Tâm"
+    },
     "auth": {
         "register": {
             "heading": "Đăng ký MysStream",

@@ -779,6 +779,11 @@ export type FindMyTransactionsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type FindMyTransactionsQuery = { __typename?: 'Query', findMyTransactions: Array<{ __typename?: 'TransactionModel', createdAt: any, status: TransactionStatus, amount: number }> };
 
+export type FindRandomStreamsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type FindRandomStreamsQuery = { __typename?: 'Query', findRandomStreams: Array<{ __typename?: 'StreamModel', title: string, thumbnailUrl?: string | null, isLive: boolean, user: { __typename?: 'UserModel', username: string, avatar?: string | null, isVerified: boolean }, category: { __typename?: 'CategoryModel', title: string, slug: string } }> };
+
 export type FindCurrentSessionQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -1797,6 +1802,56 @@ export type FindMyTransactionsQueryHookResult = ReturnType<typeof useFindMyTrans
 export type FindMyTransactionsLazyQueryHookResult = ReturnType<typeof useFindMyTransactionsLazyQuery>;
 export type FindMyTransactionsSuspenseQueryHookResult = ReturnType<typeof useFindMyTransactionsSuspenseQuery>;
 export type FindMyTransactionsQueryResult = Apollo.QueryResult<FindMyTransactionsQuery, FindMyTransactionsQueryVariables>;
+export const FindRandomStreamsDocument = gql`
+    query FindRandomStreams {
+  findRandomStreams {
+    title
+    thumbnailUrl
+    isLive
+    user {
+      username
+      avatar
+      isVerified
+    }
+    category {
+      title
+      slug
+    }
+  }
+}
+    `;
+
+/**
+ * __useFindRandomStreamsQuery__
+ *
+ * To run a query within a React component, call `useFindRandomStreamsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindRandomStreamsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindRandomStreamsQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useFindRandomStreamsQuery(baseOptions?: Apollo.QueryHookOptions<FindRandomStreamsQuery, FindRandomStreamsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<FindRandomStreamsQuery, FindRandomStreamsQueryVariables>(FindRandomStreamsDocument, options);
+      }
+export function useFindRandomStreamsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<FindRandomStreamsQuery, FindRandomStreamsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<FindRandomStreamsQuery, FindRandomStreamsQueryVariables>(FindRandomStreamsDocument, options);
+        }
+export function useFindRandomStreamsSuspenseQuery(baseOptions?: Apollo.SkipToken | Apollo.SuspenseQueryHookOptions<FindRandomStreamsQuery, FindRandomStreamsQueryVariables>) {
+          const options = baseOptions === Apollo.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<FindRandomStreamsQuery, FindRandomStreamsQueryVariables>(FindRandomStreamsDocument, options);
+        }
+export type FindRandomStreamsQueryHookResult = ReturnType<typeof useFindRandomStreamsQuery>;
+export type FindRandomStreamsLazyQueryHookResult = ReturnType<typeof useFindRandomStreamsLazyQuery>;
+export type FindRandomStreamsSuspenseQueryHookResult = ReturnType<typeof useFindRandomStreamsSuspenseQuery>;
+export type FindRandomStreamsQueryResult = Apollo.QueryResult<FindRandomStreamsQuery, FindRandomStreamsQueryVariables>;
 export const FindCurrentSessionDocument = gql`
     query FindCurrentSession {
   findCurrentSession {
