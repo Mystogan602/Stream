@@ -75,57 +75,57 @@
                     "open": "Toàn màn hình",
                     "exit": "Thoát toàn màn hình"
                 }
+            }
+        },
+        "info": {
+            "viewers": "người xem",
+            "offline": "Ngoại tuyến"
+        },
+        "actions": {
+            "follow": {
+                "confirmUnfollowHeading": "Bỏ theo dõi",
+                "confirmUnfollowMessage": "Bạn sẽ không còn nhận được thông báo từ kênh này và nó sẽ biến mất khỏi danh sách theo dõi của bạn.",
+                "unfollowButton": "Bỏ theo dõi",
+                "followButton": "Theo dõi",
+                "successFollowMessage": "Bạn đã theo dõi thành công",
+                "errorFollowMessage": "Lỗi khi theo dõi",
+                "successUnfollowMessage": "Bạn đã bỏ theo dõi thành công",
+                "errorUnfollowMessage": "Lỗi khi bỏ theo dõi"
             },
+            "support": {
+                "alreadySponsor": "Bạn đã là nhà tài trợ",
+                "supportAuthor": "Ủng hộ tác giả",
+                "perMonth": "mỗi tháng",
+                "choose": "Chọn",
+                "errorMessage": "Lỗi khi tạo thanh toán"
+            },
+            "share": {
+                "heading": "Chia sẻ"
+            }
+        },
+        "aboutChannel": {
+            "heading": "Giới thiệu",
+            "followersCount": "người theo dõi",
+            "noDescription": "Không có mô tả."
+        },
+        "sponsors": {
+            "heading": "Nhà tài trợ kênh"
+        },
+        "chat": {
+            "heading": "Trò chuyện",
+            "unavailable": "Trò chuyện không khả dụng",
+            "unavailableMessage": "Trò chuyện không khả dụng khi không có luồng trực tiếp. Vui lòng quay lại sau!",
+            "loading": "Đang kết nối...",
             "info": {
-                "viewers": "người xem",
-                "offline": "Ngoại tuyến"
+                "authRequired": "Yêu cầu đăng nhập",
+                "chatDisabled": "Trò chuyện bị tắt",
+                "premiumFollowersOnly": "Chỉ dành cho nhà tài trợ",
+                "followersOnly": "Chỉ dành cho người theo dõi"
             },
-            "actions": {
-                "follow": {
-                    "confirmUnfollowHeading": "Bỏ theo dõi",
-                    "confirmUnfollowMessage": "Bạn sẽ không còn nhận được thông báo từ kênh này và nó sẽ biến mất khỏi danh sách theo dõi của bạn.",
-                    "unfollowButton": "Bỏ theo dõi",
-                    "followButton": "Theo dõi",
-                    "successFollowMessage": "Bạn đã theo dõi thành công",
-                    "errorFollowMessage": "Lỗi khi theo dõi",
-                    "successUnfollowMessage": "Bạn đã bỏ theo dõi thành công",
-                    "errorUnfollowMessage": "Lỗi khi bỏ theo dõi"
-                },
-                "support": {
-                    "alreadySponsor": "Bạn đã là nhà tài trợ",
-                    "supportAuthor": "Ủng hộ tác giả",
-                    "perMonth": "mỗi tháng",
-                    "choose": "Chọn",
-                    "errorMessage": "Lỗi khi tạo thanh toán"
-                },
-                "share": {
-                    "heading": "Chia sẻ"
-                }
-            },
-            "aboutChannel": {
-                "heading": "Giới thiệu",
-                "followersCount": "người theo dõi",
-                "noDescription": "Không có mô tả."
-            },
-            "sponsors": {
-                "heading": "Nhà tài trợ kênh"
-            },
-            "chat": {
-                "heading": "Trò chuyện",
-                "unavailable": "Trò chuyện không khả dụng",
-                "unavailableMessage": "Trò chuyện không khả dụng khi không có luồng trực tiếp. Vui lòng quay lại sau!",
-                "loading": "Đang kết nối...",
-                "info": {
-                    "authRequired": "Yêu cầu đăng nhập",
-                    "chatDisabled": "Trò chuyện bị tắt",
-                    "premiumFollowersOnly": "Chỉ dành cho nhà tài trợ",
-                    "followersOnly": "Chỉ dành cho người theo dõi"
-                },
-                "sendMessage": {
-                    "placeholder": "Gửi tin nhắn",
-                    "emojiPlaceholder": "Tìm kiếm",
-                    "errorMessage": "Lỗi khi gửi tin nhắn."
-                }
+            "sendMessage": {
+                "placeholder": "Gửi tin nhắn",
+                "emojiPlaceholder": "Tìm kiếm",
+                "errorMessage": "Lỗi khi gửi tin nhắn."
             }
         }
     },

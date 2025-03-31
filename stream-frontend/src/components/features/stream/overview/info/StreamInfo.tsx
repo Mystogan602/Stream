@@ -7,12 +7,14 @@ import { ChannelVerified } from '@/components/ui/elements/ChannelVerified';
 
 import type { FindChannelByUsernameQuery } from '@/graphql/generated/output';
 
+import { StreamActions } from './StreamAction';
+
 interface StreamInfoProps {
 	channel: FindChannelByUsernameQuery['findChannelByUsername'];
 }
 
 export function StreamInfo({ channel }: StreamInfoProps) {
-	const t = useTranslations('stream.video.info');
+	const t = useTranslations('stream.info');
 
 	const participants = useParticipants();
 	const participantCount = participants.length - 1;
@@ -48,6 +50,7 @@ export function StreamInfo({ channel }: StreamInfoProps) {
 						)}
 					</div>
 				</div>
+				<StreamActions channel={channel} />
 			</div>
 		</div>
 	);

@@ -40,7 +40,7 @@ export function StreamThumbnail({ url, user, isLive }: StreamThumbnailProps) {
 				<Image
 					src={getMediaSource(url) as string}
 					alt={user.username}
-					fill
+					sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 					className='rounded-xl object-cover transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2'
 				/>
 			) : (
