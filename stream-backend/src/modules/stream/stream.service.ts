@@ -16,7 +16,7 @@ export class StreamService {
 		private readonly prisma: PrismaService,
 		private readonly storageService: StorageService,
 		private readonly configService: ConfigService
-	) {}
+	) { }
 
 	public async findAll(input: FiltersInput) {
 		const { take, skip, searchTerm } = input;
@@ -36,7 +36,7 @@ export class StreamService {
 				user: true,
 				category: true
 			},
-			take: take || 10,
+			take: take || 12,
 			skip: skip || 0,
 			orderBy: {
 				createdAt: 'desc'
@@ -257,8 +257,18 @@ export class StreamService {
 						contains: searchTerm,
 						mode: 'insensitive'
 					},
+				},
+				{
 					user: {
 						username: {
+							contains: searchTerm,
+							mode: 'insensitive'
+						}
+					}
+				},
+				{
+					category: {
+						title: {
 							contains: searchTerm,
 							mode: 'insensitive'
 						}

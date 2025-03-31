@@ -61,6 +61,10 @@
             "heading": "Streams in this category"
         }
     },
+    "streams": {
+        "heading": "Streams",
+        "searchHeading": "Search for streams"
+    },
     "auth": {
         "register": {
             "heading": "Register for MysStream",

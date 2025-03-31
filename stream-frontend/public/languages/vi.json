@@ -61,6 +61,10 @@
             "heading": "Các kênh trong danh mục này"
         }
     },
+    "streams": {
+        "heading": "Kênh",
+        "searchHeading": "Tìm kiếm kênh"
+    },
     "auth": {
         "register": {
             "heading": "Đăng ký MysStream",
