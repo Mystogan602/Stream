@@ -22,13 +22,14 @@ export function ChannelVerified({ size }: ChannelVerifiedProps) {
 	return (
 		<span
 			className={cn(
-				'flex items-center justify-center rounded-full bg-primary p-0.5',
+				'flex items-center justify-center rounded-full bg-primary',
 				channelVerifiedSizes({ size })
 			)}
 		>
 			<Check
 				className={cn(
-					'stroke-[3px] text-white',
+					'stroke-[4px] p-[3px] text-white',
+					size === 'sm' ? 'size-3' : 'size-4'
 				)}
 			/>
 		</span>
