@@ -129,6 +129,19 @@
             }
         }
     },
+    "success": {
+        "heading": "Thanh toán thành công!",
+        "details": {
+            "heading": "Chi tiết tài trợ:",
+            "price": "Giá:",
+            "duration": "Thời gian: 1 Tháng",
+            "channel": "Kênh:"
+        },
+        "congratulations": "Bạn đã có quyền truy cập vào nội dung cao cấp của kênh!",
+        "backToHome": "Quay lại trang chủ",
+        "backToChannel": "Quay lại kênh",
+        "support": "Nếu bạn có bất kỳ câu hỏi nào, hãy liên hệ với hỗ trợ của chúng tôi."
+    },
     "auth": {
         "register": {
             "heading": "Đăng ký MysStream",

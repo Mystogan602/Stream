@@ -14,5 +14,11 @@ query FindChannelByUsername($username: String!) {
 				title
 			}
 		}
+		sponsorshipPlan {
+			id
+			title
+			description
+			price
+		}
 	}
 }

@@ -3,7 +3,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 
 @Injectable()
 export class ChannelService {
-	public constructor(private readonly prismaService: PrismaService) {}
+	public constructor(private readonly prismaService: PrismaService) { }
 
 	async findRecommendedChannels() {
 		const channels = await this.prismaService.user.findMany({
@@ -41,7 +41,9 @@ export class ChannelService {
 						category: true
 					}
 				},
-				followings: true
+				followings: true,
+				sponsorshipPlan: true,
+				sponsorshipSubscriptions: true
 			}
 		});
 
@@ -77,7 +79,7 @@ export class ChannelService {
 		const sponsors =
 			await this.prismaService.sponsorshipSubscription.findMany({
 				where: {
-					channelId: channel.id 
+					channelId: channel.id
 				},
 				orderBy: {
 					createdAt: 'desc'
