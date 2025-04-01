@@ -806,7 +806,7 @@ export type FindChannelByUsernameQueryVariables = Exact<{
 }>;
 
 
-export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', id: string, displayName: string, username: string, avatar?: string | null, isVerified: boolean, bio?: string | null, stream: { __typename?: 'StreamModel', title: string, thumbnailUrl?: string | null, isLive: boolean, category?: { __typename?: 'CategoryModel', title: string } | null }, sponsorshipPlan?: Array<{ __typename?: 'PlanModel', id: string, title: string, description?: string | null, price: number }> | null } };
+export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', id: string, displayName: string, username: string, avatar?: string | null, isVerified: boolean, bio?: string | null, socialLinks: Array<{ __typename?: 'SocialLinkModel', title: string, url: string }>, stream: { __typename?: 'StreamModel', title: string, thumbnailUrl?: string | null, isLive: boolean, category?: { __typename?: 'CategoryModel', title: string } | null }, sponsorshipPlan?: Array<{ __typename?: 'PlanModel', id: string, title: string, description?: string | null, price: number }> | null, followings: Array<{ __typename?: 'FollowModel', id: string }> } };
 
 export type FindRecommendedChannelsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -1932,6 +1932,10 @@ export const FindChannelByUsernameDocument = gql`
     avatar
     isVerified
     bio
+    socialLinks {
+      title
+      url
+    }
     stream {
       title
       thumbnailUrl
@@ -1945,6 +1949,9 @@ export const FindChannelByUsernameDocument = gql`
       title
       description
       price
+    }
+    followings {
+      id
     }
   }
 }
