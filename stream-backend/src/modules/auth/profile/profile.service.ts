@@ -57,7 +57,7 @@ export class ProfileService {
 
 		await this.prismaService.user.update({
 			where: { id: user.id },
-			data: { avatar: fileName }
+			data: { avatar: '/' + fileName }
 		});
 
 		return true;

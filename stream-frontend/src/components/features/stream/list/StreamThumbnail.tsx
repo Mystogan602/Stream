@@ -9,8 +9,9 @@ import { LiveBadge } from '@/components/ui/elements/LiveBadge';
 
 import type { FindProfileQuery } from '@/graphql/generated/output';
 
+import { useThumbnailUrl } from '@/hooks/useThumbnailUrl';
+
 import { getRandomColor } from '@/utils/color';
-import { getMediaSource } from '@/utils/get-media-source';
 
 interface StreamThumbnailProps {
 	url: string | null | undefined;
@@ -23,6 +24,7 @@ interface StreamThumbnailProps {
 
 export function StreamThumbnail({ url, user, isLive }: StreamThumbnailProps) {
 	const [randomColor, setRandomColor] = useState('');
+	const thumbnailUrl = useThumbnailUrl(url);
 
 	useEffect(() => {
 		setRandomColor(getRandomColor());
@@ -38,7 +40,7 @@ export function StreamThumbnail({ url, user, isLive }: StreamThumbnailProps) {
 			/>
 			{url ? (
 				<Image
-					src={getMediaSource(url) as string}
+					src={thumbnailUrl as string}
 					alt={user.username}
 					fill
 					sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'

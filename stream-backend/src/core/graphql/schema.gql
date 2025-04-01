@@ -149,7 +149,7 @@ type Mutation {
   changeProfileAvatar(avatar: Upload!): Boolean!
   changeProfileInfo(data: ChangeProfileInfoInput!): Boolean!
   changeStreamInfo(data: ChangeStreamInfoInput!): Boolean!
-  changeStreamThumbnail(thumbnail: Upload!): StreamModel!
+  changeStreamThumbnail(thumbnail: Upload!): Boolean!
   clearSessionCookies: Boolean!
   createIngress(ingressType: Float!): Boolean!
   createSocialLink(data: SocialLinkInput!): Boolean!
@@ -168,7 +168,7 @@ type Mutation {
   removeSession(id: String!): Boolean!
   removeSocialLink(id: String!): Boolean!
   removeSponsorshipPlan(planId: String!): Boolean!
-  removeStreamThumbnail: StreamModel!
+  removeStreamThumbnail: Boolean!
   reorderSocialLinks(list: [SocialLinkOrderInput!]!): Boolean!
   resetPassword(data: ResetPasswordInput!): Boolean!
   sendChatMessage(data: SendMessageInput!): ChatMessageModel!

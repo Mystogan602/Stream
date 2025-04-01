@@ -8,7 +8,7 @@ import { Card } from '@/components/ui/common/Card';
 
 import type { FindChannelByUsernameQuery } from '@/graphql/generated/output';
 
-import { getMediaSource } from '@/utils/get-media-source';
+import { useThumbnailUrl } from '@/hooks/useThumbnailUrl';
 
 interface OfflineStreamProps {
 	channel: FindChannelByUsernameQuery['findChannelByUsername'];
@@ -16,9 +16,10 @@ interface OfflineStreamProps {
 
 export function OfflineStream({ channel }: OfflineStreamProps) {
 	const t = useTranslations('stream.video');
+	const thumbnailUrl = useThumbnailUrl(channel.stream.thumbnailUrl);
 
 	const backgroundStyle: CSSProperties = {
-		backgroundImage: `url(${getMediaSource(channel.stream.thumbnailUrl)})`,
+		backgroundImage: `url(${thumbnailUrl})`,
 		backgroundSize: 'cover',
 		backgroundPosition: 'center'
 	};

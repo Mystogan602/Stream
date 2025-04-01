@@ -1,6 +1,4 @@
-import { useAvatarStore } from '@/stores/avatar/avatar.store';
 import { type VariantProps, cva } from 'class-variance-authority';
-import { useMemo } from 'react';
 
 import {
 	Avatar,
@@ -10,7 +8,8 @@ import {
 
 import { FindProfileQuery } from '@/graphql/generated/output';
 
-import { getMediaSource } from '@/utils/get-media-source';
+import { useAvatarUrl } from '@/hooks/useAvatarUrl';
+
 import { cn } from '@/utils/tw-merge';
 
 const avatarSizes = cva('', {
@@ -33,13 +32,7 @@ interface ChannelAvatarProps extends VariantProps<typeof avatarSizes> {
 }
 
 export function ChannelAvatar({ channel, size, isLive }: ChannelAvatarProps) {
-	const timestamp = useAvatarStore(state => state.timestamp);
-
-	const avatarUrl = useMemo(() => {
-		if (!channel.avatar) return undefined;
-		const url = getMediaSource(channel.avatar);
-		return `${url}?t=${timestamp}`;
-	}, [channel.avatar, timestamp]);
+	const avatarUrl = useAvatarUrl(channel.avatar);
 
 	return (
 		<div className='relative'>

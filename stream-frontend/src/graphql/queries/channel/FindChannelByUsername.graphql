@@ -19,6 +19,7 @@ query FindChannelByUsername($username: String!) {
 			isChatFollowersOnly
 			isChatPremiumFollowersOnly
 			category {
+				id
 				title
 			}
 		}

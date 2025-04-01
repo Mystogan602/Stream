@@ -30,7 +30,7 @@ import {
 export function ChangeAvatarForm() {
 	const t = useTranslations('dashboard.settings.profile.avatar');
 	const { user, isLoadingProfile, refetch } = useCurrent();
-	const { updateTimestamp } = useAvatarStore();
+	const { incrementVersion } = useAvatarStore();
 	const inputRef = useRef<HTMLInputElement>(null);
 
 	const form = useForm<TypeUploadFileSchema>({
@@ -44,7 +44,7 @@ export function ChangeAvatarForm() {
 		useChangeProfileAvatarMutation({
 			onCompleted() {
 				refetch();
-				updateTimestamp();
+				incrementVersion();
 				toast.success(t('successUpdateMessage'));
 			},
 			onError() {
@@ -86,14 +86,6 @@ export function ChangeAvatarForm() {
 									channel={{
 										username: user?.username || '',
 										avatar: user?.avatar
-										// avatar:
-										// 	field.value instanceof File
-										// 		? URL.createObjectURL(
-										// 				field.value
-										// 			)
-										// 		: field.value ||
-										// 			user?.avatar ||
-										// 			''
 									}}
 									size='xl'
 								/>

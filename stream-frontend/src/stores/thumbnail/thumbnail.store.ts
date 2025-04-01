@@ -1,11 +1,11 @@
 import { create } from 'zustand';
 
-interface AvatarStore {
+interface ThumbnailStore {
     version: number;
     incrementVersion: () => void;
 }
 
-export const useAvatarStore = create<AvatarStore>((set) => ({
+export const useThumbnailStore = create<ThumbnailStore>((set) => ({
     version: 1,
     incrementVersion: () => set((state) => ({ version: state.version + 1 }))
 }));

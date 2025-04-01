@@ -120,15 +120,15 @@ export class StreamService {
 		}
 
 		const chunks: Buffer[] = [];
-		for await (const chunk of file.createReadsStream()) {
+		for await (const chunk of file.createReadStream()) {
 			chunks.push(chunk);
 		}
 
 		const buffer = Buffer.concat(chunks);
 
-		const fileName = `streams/${user.username}-${stream.id}.webp`;
+		const fileName = `streams/${user.username}.webp`;
 
-		if (file.filename && file.filename.endWith('.gif')) {
+		if (file.filename && file.filename.endsWith('.gif')) {
 			const processedBuffer = await sharp(buffer, { animated: true })
 				.resize(1280, 720)
 				.webp()
@@ -154,7 +154,7 @@ export class StreamService {
 
 		await this.prisma.stream.update({
 			where: { id: stream.id },
-			data: { thumbnailUrl: fileName }
+			data: { thumbnailUrl: '/' + fileName }
 		});
 
 		return true;

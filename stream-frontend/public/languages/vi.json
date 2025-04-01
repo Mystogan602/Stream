@@ -127,6 +127,32 @@
                 "emojiPlaceholder": "Tìm kiếm",
                 "errorMessage": "Lỗi khi gửi tin nhắn."
             }
+        },
+        "settings": {
+            "heading": "Cài đặt Stream",
+            "thumbnail": {
+                "updateButton": "Cập nhật ảnh",
+                "confirmModal": {
+                    "heading": "Xóa ảnh bìa stream",
+                    "message": "Bạn chắc chắn muốn xóa ảnh bìa stream? Hành động này không thể hoàn tác."
+                },
+                "info": "Định dạng hỗ trợ: JPG, JPEG, PNG, WEBP hoặc GIF. Kích thước tối đa: 10 MB.",
+                "successUpdateMessage": "Cập nhật ảnh stream thành công",
+                "errorUpdateMessage": "Lỗi khi cập nhật ảnh stream",
+                "successRemoveMessage": "Xóa ảnh stream thành công",
+                "errorRemoveMessage": "Lỗi khi xóa ảnh stream"
+            },
+            "info": {
+                "titleLabel": "Tiêu đề",
+                "titlePlaceholder": "Stream GTA 5",
+                "titleDescription": "Nhập tiêu đề stream. Nên ngắn gọn và dễ nhớ.",
+                "categoryLabel": "Danh mục",
+                "categoryPlaceholder": "Chọn danh mục",
+                "categoryDescription": "Chọn danh mục phù hợp với nội dung stream của bạn.",
+                "submitButton": "Lưu thay đổi",
+                "successMessage": "Cập nhật cài đặt stream thành công",
+                "errorMessage": "Lỗi khi cập nhật cài đặt stream"
+            }
         }
     },
     "success": {

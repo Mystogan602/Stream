@@ -36,7 +36,7 @@ export class StreamResolver {
 	}
 
 	@Authorization()
-	@Mutation(() => StreamModel, { name: 'changeStreamThumbnail' })
+	@Mutation(() => Boolean, { name: 'changeStreamThumbnail' })
 	public async changeThumbnail(
 		@Authorized() user: User,
 		@Args('thumbnail', { type: () => GraphQLUpload }, FileValidationPipe)
@@ -46,7 +46,7 @@ export class StreamResolver {
 	}
 
 	@Authorization()
-	@Mutation(() => StreamModel, { name: 'removeStreamThumbnail' })
+	@Mutation(() => Boolean, { name: 'removeStreamThumbnail' })
 	public async removeThumbnail(@Authorized() user: User) {
 		return this.streamService.removeThumbnail(user);
 	}
