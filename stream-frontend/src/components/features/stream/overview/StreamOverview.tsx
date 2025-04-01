@@ -9,6 +9,7 @@ import { useStreamToken } from '@/hooks/useStreamToken';
 import { StreamInfo, StreamInfoSkeleton } from './info/StreamInfo';
 import { StreamVideo, StreamVideoSkeleton } from './player/StreamVideo';
 import { AboutChannel, AboutChannelSkeleton } from './info/AboutChannel';
+import { ChannelSponsors } from './info/ChannelSponsors';
 
 interface StreamOverviewProps {
 	channel: FindChannelByUsernameQuery['findChannelByUsername'];
@@ -31,6 +32,7 @@ export function StreamOverview({ channel }: StreamOverviewProps) {
 				<StreamVideo channel={channel} />
 				<StreamInfo channel={channel} />
 				<AboutChannel channel={channel} />
+				<ChannelSponsors channel={channel} />
 			</div>
 			<div className='order-2 col-span-1 flex h-80 flex-col space-y-6 lg:col-span-2'>
 				Chat

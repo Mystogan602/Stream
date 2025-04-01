@@ -818,7 +818,7 @@ export type FindSponsorsByChannelQueryVariables = Exact<{
 }>;
 
 
-export type FindSponsorsByChannelQuery = { __typename?: 'Query', findSponsorsByChannel: Array<{ __typename?: 'SubscriptionModel', user: { __typename?: 'UserModel', id: string } }> };
+export type FindSponsorsByChannelQuery = { __typename?: 'Query', findSponsorsByChannel: Array<{ __typename?: 'SubscriptionModel', user: { __typename?: 'UserModel', id: string, username: string, avatar?: string | null } }> };
 
 export type FindMyFollowersQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -2038,6 +2038,8 @@ export const FindSponsorsByChannelDocument = gql`
   findSponsorsByChannel(channelId: $channelId) {
     user {
       id
+      username
+      avatar
     }
   }
 }
