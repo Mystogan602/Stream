@@ -813,7 +813,7 @@ export type UpdateSocialLinkMutation = { __typename?: 'Mutation', updateSocialLi
 export type FindAllCategoriesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindAllCategoriesQuery = { __typename?: 'Query', findAllCategories: Array<{ __typename?: 'CategoryModel', id: string, title: string, slug: string, thumbnailUrl: string }> };
+export type FindAllCategoriesQuery = { __typename?: 'Query', findAllCategories: Array<{ __typename?: 'CategoryModel', id: string, updatedAt: any, title: string, slug: string, thumbnailUrl: string }> };
 
 export type FindCategoryBySlugQueryVariables = Exact<{
   slug: Scalars['String']['input'];
@@ -1954,6 +1954,7 @@ export const FindAllCategoriesDocument = gql`
     query FindAllCategories {
   findAllCategories {
     id
+    updatedAt
     title
     slug
     thumbnailUrl

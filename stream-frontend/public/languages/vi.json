@@ -168,6 +168,10 @@
         "backToChannel": "Quay lại kênh",
         "support": "Nếu bạn có bất kỳ câu hỏi nào, hãy liên hệ với hỗ trợ của chúng tôi."
     },
+    "notFound": {
+        "description": "Rất tiếc, đã xảy ra lỗi",
+        "backToHome": "Quay về Trang chủ"
+    },
     "auth": {
         "register": {
             "heading": "Đăng ký MysStream",

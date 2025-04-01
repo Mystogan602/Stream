@@ -13,14 +13,13 @@ import {
 	CardTitle
 } from '@/components/ui/common/Card';
 
+import { NO_INDEX_PAGE } from '@/libs/constants/seo.constant';
+
 export async function generateMetadata(): Promise<Metadata> {
 	const t = await getTranslations('success');
 	return {
 		title: t('heading'),
-		robots: {
-			index: false,
-			follow: false
-		}
+		...NO_INDEX_PAGE
 	};
 }
 
@@ -53,7 +52,8 @@ export default async function SuccessPage(props: {
 						<ul className='space-y-2'>
 							<li className='flex items-center'>
 								<span>
-									{t('details.price')} {searchParams.price} Vnd
+									{t('details.price')} {searchParams.price}{' '}
+									Vnd
 								</span>
 							</li>
 							<li className='flex items-center'>
