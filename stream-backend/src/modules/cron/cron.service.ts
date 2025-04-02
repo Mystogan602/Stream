@@ -65,32 +65,32 @@ export class CronService {
 		});
 	}
 
-	@Cron('0 0 */7 * *')
-	public async notifyUsersEnableTwoFactor() {
-		const users = await this.prismaService.user.findMany({
-			where: {
-				isTotpEnabled: false
-			},
-			include: {
-				notificationSettings: true
-			}
-		});
+	// @Cron('0 0 */7 * *')
+	// public async notifyUsersEnableTwoFactor() {
+	// 	const users = await this.prismaService.user.findMany({
+	// 		where: {
+	// 			isTotpEnabled: false
+	// 		},
+	// 		include: {
+	// 			notificationSettings: true
+	// 		}
+	// 	});
 
-		for (const user of users) {
-			await this.mailService.sendEnableTwoFactor(user.email);
+	// 	for (const user of users) {
+	// 		await this.mailService.sendEnableTwoFactor(user.email);
 
-			if (user.notificationSettings?.siteNotifications) {
-				await this.notificationService.createEnableTwoFactor(user.id);
-			}
+	// 		if (user.notificationSettings?.siteNotifications) {
+	// 			await this.notificationService.createEnableTwoFactor(user.id);
+	// 		}
 
-			if (
-				user.notificationSettings?.telegramNotifications &&
-				user.telegramId
-			) {
-				await this.telegramService.sendEnableTwoFactor(user.telegramId);
-			}
-		}
-	}
+	// 		if (
+	// 			user.notificationSettings?.telegramNotifications &&
+	// 			user.telegramId
+	// 		) {
+	// 			await this.telegramService.sendEnableTwoFactor(user.telegramId);
+	// 		}
+	// 	}
+	// }
 
 	@Cron(CronExpression.EVERY_DAY_AT_1AM)
 	public async verifyChannels() {
