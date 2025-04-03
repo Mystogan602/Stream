@@ -12,6 +12,7 @@ export function getGraphQLConfig(
 		autoSchemaFile: join(process.cwd(), 'src/core/graphql/schema.gql'), // auto schema file
 		sortSchema: true, // sort schema
 		context: ({ req, res }) => ({ req, res }), // context
-		installSubscriptionHandlers: true // install subscription handlers
+		installSubscriptionHandlers: true, // install subscription handlers
+		introspection: true
 	};
 }
