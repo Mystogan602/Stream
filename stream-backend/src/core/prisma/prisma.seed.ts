@@ -56,7 +56,7 @@ async function main() {
 				if (!userExists) {
 					const createdUser = await tx.user.create({
 						data: {
-							email: `${username}@mysstream.vn`,
+							email: `${username}@mysstream.shop`,
 							password: await hash('12345678'),
 							username,
 							displayName: username,

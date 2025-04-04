@@ -18,13 +18,13 @@ export const MESSAGES = {
 		`📝 Bio: <b>${user.bio || 'Not set'}</b>\n\n` +
 		`⚙️ Click the button below to go to the profile settings.`,
 	follows: (user: User) =>
-		`🔖 Username: <a href="https://mysstream.com/${user.username}">${user.username}</a>\n`,
+		`🔖 Username: <a href="https://mysstream.shop/${user.username}">${user.username}</a>\n`,
 	resetPassword: (token: string, metadata: SessionMetadata) =>
 		`🔑 <b>Password reset</b>\n\n` +
 		`📨 You requested a password reset for your account on the platform ` +
 		`<b>Mysstream</b>.\n\n` +
 		`🔄 To create a new password, please click on the following link:\n\n` +
-		`🔗 <b><a href="https://mysstream.com/account/recovery/${token}">Reset password</a></b>\n\n` +
+		`🔗 <b><a href="https://mysstream.shop/account/recovery/${token}">Reset password</a></b>\n\n` +
 		`📅 <b>Request date:</b> ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}\n\n\n` +
 		`ℹ️ <b>Request information:</b>\n\n` +
 		`📍 <b>Location:</b> ${metadata.location.country}, ${metadata.location.city}\n` +
@@ -63,29 +63,29 @@ export const MESSAGES = {
 		`📝 Your account was completely deleted from the database of Mysstream. All your data and information were deleted without the ability to restore.\n\n` +
 		`🔕 You will no longer receive notifications in Telegram and email.\n\n` +
 		`✨ If you want to return to the platform, you can register using the following link:\n` +
-		`🔗 <b><a href="https://mysstream.com/account/create">Register on ` +
+		`🔗 <b><a href="https://mysstream.shop/account/create">Register on ` +
 		`Mysstream</a></b>\n\n` +
 		`🙏 Thank you for being with us! We always welcome you to our platform.\n\n` +
 		`With respect,\n` +
 		`Mysstream Team`,
 	streamStart: (channel: User) =>
 		`🎥 <b>Stream ${channel.displayName} started</b>\n\n` +
-		`👀 Watch here: <a href="https://mysstream.com/${channel.username}">Go to stream</a>`,
+		`👀 Watch here: <a href="https://mysstream.shop/${channel.username}">Go to stream</a>`,
 
 	newFollowing: (follower: User, followersCount: number) =>
 		`🎉 <b>You have a new follower!</b>\n\n` +
-		`👤 This is user <a href="https://mysstream.com/${follower.username}">${follower.displayName}</a>\n\n` +
+		`👤 This is user <a href="https://mysstream.shop/${follower.username}">${follower.displayName}</a>\n\n` +
 		`👥 Total number of followers on your channel: ${followersCount}`,
 	newSponsorship: (plan: SponsorshipPlan, sponsor: User) =>
 		`🎉 <b>New sponsorship!</b>\n\n` +
 		`💝 You have received a new sponsorship on the plan <b>${plan.title}</b>.\n` +
 		`💰 Amount: <b>${plan.price} VND</b>\n` +
-		`👤 Sponsor: <a href="https://mysstream.com/${sponsor.username}">${sponsor.displayName}</a>\n` +
+		`👤 Sponsor: <a href="https://mysstream.shop/${sponsor.username}">${sponsor.displayName}</a>\n` +
 		`📅 Date of purchase: <b>${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}</b>\n\n` +
 		`🙏 Thank you for your work and support on the platform Mysstream!`,
 	enableTwoFactor: () =>
 		`🔐 <b>Protect your account!</b>\n\n` +
-		`Please enable two-factor authentication in <a href="https://mysstream.com/dashboard/settings">account settings</a>.`,
+		`Please enable two-factor authentication in <a href="https://mysstream.shop/dashboard/settings">account settings</a>.`,
 
 	verifyChannel: () =>
 		`✅ <b>Congratulations! Your channel has been verified</b>\n\n` +

@@ -6,13 +6,13 @@ export const BUTTONS = {
 			Markup.button.callback('👥 Follows', 'follows'),
 			Markup.button.callback('👤 Me', 'me')
 		],
-		[Markup.button.url('🌐 Website', 'https://mysstream.com')]
+		[Markup.button.url('🌐 Website', 'https://mysstream.shop')]
 	]),
 	profile: Markup.inlineKeyboard([
 		[
 			Markup.button.url(
 				'⚙️ Account Settings',
-				'https://mysstream.com/dashboard/settings'
+				'https://mysstream.shop/dashboard/settings'
 			)
 		]
 	])

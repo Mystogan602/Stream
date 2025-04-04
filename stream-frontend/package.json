@@ -6,7 +6,6 @@
     "dev": "graphql-codegen --config graphql.config.ts && next dev --turbopack",
     "build": "graphql-codegen --config graphql.config.ts && next build",
     "start": "next start",
-    "lint": "next lint",
     "codegen": "graphql-codegen --config graphql.config.ts"
   },
   "dependencies": {
@@ -69,8 +68,6 @@
     "@types/node": "^20",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
-    "eslint": "^8",
-    "eslint-config-next": "15.2.3",
     "postcss": "^8",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.1",

@@ -34,7 +34,7 @@ export function EnableTwoFactorTemplate({ domain }: EnableTwoFactorTemplateProps
                         </Text>
                         <Link
                             href={settingsLink}
-                            className="inline-flex justify-center items-center rounded-md text-sm font-medium text-white bg-[#18B9AE] px-5 py-2 rounded-full"
+                            className="inline-flex justify-center items-center text-sm font-medium text-white bg-[#18B9AE] px-5 py-2 rounded-full"
                         >
                             Go to account settings
                         </Link>
